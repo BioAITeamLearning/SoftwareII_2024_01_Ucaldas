@@ -1,0 +1,806 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Unidad 4: Ingeniería de requisitos &#8212; Desarrollo de Software II 2024 - 01</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=afe5de03"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Unidad4';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="https://avatars.githubusercontent.com/u/142033488?s=200&v=4" class="logo__image only-light" alt="Desarrollo de Software II 2024 - 01 - Home"/>
+    <script>document.write(`<img src="https://avatars.githubusercontent.com/u/142033488?s=200&v=4" class="logo__image only-dark" alt="Desarrollo de Software II 2024 - 01 - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Desarrollo de Software II
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Unidad1.html">Unidad 1: Desarrollo en Equipo</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/BioAITeamLearning/SoftwareII_2024_01_Ucaldas" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/BioAITeamLearning/SoftwareII_2024_01_Ucaldas/issues/new?title=Issue%20on%20page%20%2FUnidad4.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Unidad4.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Unidad 4: Ingeniería de requisitos</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contenido-de-la-unidad">Contenido de la unidad</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conceptos-basicos-de-la-ingenieria-de-requisitos">Conceptos básicos de la ingeniería de requisitos.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definicion-de-requisitos">Definición de requisitos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#que-dice-el-chatgpt">¿Qué dice el ChatGPT?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definicion-de-ingenieria-de-requisitos">Definición de “Ingeniería de requisitos”</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definicion-formal-de-ingenieria-de-requisitos">Definición formal de “Ingeniería de requisitos”</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#propiedades-de-un-requisito">Propiedades de un requisito</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#de-donde-obtengo-los-requisitos-fuentes-generales-de-requisitos">¿De donde obtengo los requisitos?: <em>Fuentes generales de requisitos</em></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grupos-de-interes-stakeholders">Grupos de interés: <em>“Stakeholders”</em></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#de-donde-vienen-los-requisitos">¿De dónde vienen los requisitos?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tecnicas-para-obtencion-de-requisitos">Técnicas para obtención de requisitos</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contextualizando-los-requisitos">Contextualizando los requisitos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importancia-de-la-ingenieria-de-requisitos-meme">Importancia de la ingeniería de requisitos: MEME</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#costos-relativos-basados-en-el-tiempo-de-deteccion-de-errores">Costos relativos basados en el tiempo de detección de errores.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#actividades-para-describir-los-requerimientos">Actividades para describir los requerimientos</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#actividades-adquisicion-de-requisitos-elicitacion">Actividades: Adquisición de requisitos/Elicitación</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#adquisicion-cuestionarios">Adquisición: Cuestionarios</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#consideraciones-para-los-cuestionarios">Consideraciones para los cuestionarios</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#actividades-analisis">Actividades: Análisis</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#actividades-especificacion">Actividades: Especificación</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#actividades-validacion">Actividades: Validación</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#actividades-administracion">Actividades: Administración</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="unidad-4-ingenieria-de-requisitos">
+<h1>Unidad 4: Ingeniería de requisitos<a class="headerlink" href="#unidad-4-ingenieria-de-requisitos" title="Link to this heading">#</a></h1>
+<section id="contenido-de-la-unidad">
+<h2>Contenido de la unidad<a class="headerlink" href="#contenido-de-la-unidad" title="Link to this heading">#</a></h2>
+<img src="_static/images/contenidoU4.png"/>
+</section>
+<hr class="docutils" />
+<section id="conceptos-basicos-de-la-ingenieria-de-requisitos">
+<h2>Conceptos básicos de la ingeniería de requisitos.<a class="headerlink" href="#conceptos-basicos-de-la-ingenieria-de-requisitos" title="Link to this heading">#</a></h2>
+<p>La base de la ingeniería de requisitos es:</p>
+<p><em>Debemos entender <strong>qué vamos a desarrollar</strong> antes de desarrollarlo.</em></p>
+<p>En la mayoría de los casos, es importante tener la guía de lo que se quiere hacer antes de ir a desarrollar desmedidamente (“a la loca”) algún sistema.</p>
+<p>Tener siempre en mente este precepto puede ahorrarnos muchísimo dinero a la hora de desarrollar.</p>
+<div style="text-align: center;">
+  <img src="https://1.bp.blogspot.com/-JAyyukwLusU/V1I2EJIpMdI/AAAAAAAAEQw/BBRmbGbtnd8SJw53K7YATW0FEJZVolbcACLcB/s1600/Curso%2BOnline%2Bde%2BIngenier%25C3%25ADa%2Bde%2Brequisitos.jpg" />
+</div>
+</section>
+<hr class="docutils" />
+<section id="definicion-de-requisitos">
+<h2>Definición de requisitos<a class="headerlink" href="#definicion-de-requisitos" title="Link to this heading">#</a></h2>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 text-center docutils">
+<div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-4 sd-row-cols-lg-1 sd-g-3 sd-g-xs-3 sd-g-sm-3 sd-g-md-3 sd-g-lg-3 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-header bg-light docutils">
+<p class="sd-card-text"><strong>🧠 Definición</strong></p>
+</div>
+<div class="sd-card-body docutils">
+<p class="sd-card-text">Una condición o capacidad que necesita un usuario para resolver un problema o lograr un objetivo (Glosario de IEEE - 1997).</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-header bg-light docutils">
+<p class="sd-card-text"><strong>🧠 Definición</strong></p>
+</div>
+<div class="sd-card-body docutils">
+<p class="sd-card-text">Una condición o capacidad que debe tener un sistema o un componente para satisfacer un contrato, especificación u otro documento formalmente impuesto (Glosario de IEEE - 1997).</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-header bg-light docutils">
+<p class="sd-card-text"><strong>🧠 Definición</strong></p>
+</div>
+<div class="sd-card-body docutils">
+<p class="sd-card-text">Una propiedad que debe presentar el software, para resolver un problema del mundo real (Software Engineering Body of Knowledge).</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-header bg-light docutils">
+<p class="sd-card-text"><strong>🧠 Definición</strong></p>
+</div>
+<div class="sd-card-body docutils">
+<p class="sd-card-text">Descripción de lo que el sistema debe hacer: el servicio que ofrece y las restricciones en su operación (Ian Sommerville).</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="que-dice-el-chatgpt">
+<h2>¿Qué dice el ChatGPT?<a class="headerlink" href="#que-dice-el-chatgpt" title="Link to this heading">#</a></h2>
+<p>En ingeniería de software, un requisito es una característica o función que el software debe tener para satisfacer las necesidades de los usuarios. Pueden ser funcionales o no funcionales, explícitos o implícitos. Identificar, documentar, analizar, validar y gestionar los requisitos es crucial para garantizar que el software entregado cumpla con las necesidades y expectativas de los usuarios finales y otras partes interesadas. (ChatGPT)</p>
+<img src="https://static.vecteezy.com/system/resources/previews/021/059/827/original/chatgpt-logo-chat-gpt-icon-on-white-background-free-vector.jpg"/>
+</section>
+<hr class="docutils" />
+<section id="definicion-de-ingenieria-de-requisitos">
+<h2>Definición de “Ingeniería de requisitos”<a class="headerlink" href="#definicion-de-ingenieria-de-requisitos" title="Link to this heading">#</a></h2>
+<p>El término “ingeniería de requisitos” es ampliamente usado para denotar el manejo sistemático de los requisitos (SWEBOK). Sirve para Plasmar deseos – y ayudar a ponerse de acuerdo a los interesados en la especificación de una solución.</p>
+<p>Pretende la obtención de requisitos concisos y claros, que permitan tener una visión precisa del sistema que se desea desarrollar.</p>
+<p>Involucra todas las actividades relacionadas con la obtención, evaluación y documentación de los requisitos.</p>
+<img src="_static/images/U4_1.png"/>
+<img src="_static/images/U4_2.png"/>
+</section>
+<hr class="docutils" />
+<section id="definicion-formal-de-ingenieria-de-requisitos">
+<h2>Definición formal de “Ingeniería de requisitos”<a class="headerlink" href="#definicion-formal-de-ingenieria-de-requisitos" title="Link to this heading">#</a></h2>
+<p>“La <strong>ingeniería de requisitos</strong> es el proceso de establecer las <strong>necesidades</strong> (servicios) de los <strong>stakeholders</strong> que serán resueltas por el software a desarrollar y las <strong>restricciones</strong> sobre las que debe operar dicho software”.</p>
+<div style="text-align: center;">
+  <img src="https://www.sistedes.es/files/requisitos.jpeg" />
+</div>
+<p>Los <strong>requisitos</strong> son las <strong>descripciones</strong> de las necesidades y las restricciones que se generan durante el proceso de ingeniería de requisitos.</p>
+</section>
+<hr class="docutils" />
+<section id="propiedades-de-un-requisito">
+<h2>Propiedades de un requisito<a class="headerlink" href="#propiedades-de-un-requisito" title="Link to this heading">#</a></h2>
+<img src="_static/images/U4_3.png"/>
+<ul class="simple">
+<li><p>Verificable: Se debe poder generar un producto o un indicador que mida numéricamente.</p></li>
+<li><p>Ambiguo: Un requisito no puede ser interpretado de más de una manera. Así se evitan inconvenientes a futuro con el cliente.</p></li>
+<li><p>Priorizar: Los requisitos deben poder ordenarse de manera que puedan priorizarse.</p></li>
+<li><p><strong>Evitar el uso de juicios de valor en la elaboración de los mismos.</strong></p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="de-donde-obtengo-los-requisitos-fuentes-generales-de-requisitos">
+<h2>¿De donde obtengo los requisitos?: <em>Fuentes generales de requisitos</em><a class="headerlink" href="#de-donde-obtengo-los-requisitos-fuentes-generales-de-requisitos" title="Link to this heading">#</a></h2>
+<img src="_static/images/U4_4.png"/>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Normatividad importante (solo por mencionar):</p>
+<p><strong>ISO 27001</strong> que es la de seguridad e integridad de los datos.</p>
+<p><strong>ISO 25000</strong> Establece los parámetros para evaluar la calidad del software.</p>
+</div>
+</section>
+<hr class="docutils" />
+<section id="grupos-de-interes-stakeholders">
+<h2>Grupos de interés: <em>“Stakeholders”</em><a class="headerlink" href="#grupos-de-interes-stakeholders" title="Link to this heading">#</a></h2>
+<img src="_static/images/U4_5.png"/>
+<p>Estos son los que entienden cómo funciona el negocio para el cual yo realizo el desarrollo.
+Entiende la lógica del negocio y las necesidades que se requieren suplir.</p>
+<p>Ellos también conocen las restricciones de tiempo y dinero que existen en el proyecto</p>
+<p>Algunos <em>stakeholders</em> son:</p>
+<ul class="simple">
+<li><p>El gobierno</p></li>
+<li><p>El CEO de la compañía</p></li>
+<li><p>EL cliente</p></li>
+<li><p>Los socios de una compañía</p></li>
+<li><p>Una organización</p></li>
+<li><p>etc.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="de-donde-vienen-los-requisitos">
+<h2>¿De dónde vienen los requisitos?<a class="headerlink" href="#de-donde-vienen-los-requisitos" title="Link to this heading">#</a></h2>
+<img src="_static/images/U4_6.png"/>
+<p>Los Stakeholders son los que me dan las pautas y necesidades de un proyecto de software.
+Ellos le permiten al equipo de desarrollo responder las preguntas que se plantean en la figura de arriba.</p>
+<hr class="docutils" />
+<section id="tecnicas-para-obtencion-de-requisitos">
+<h3>Técnicas para obtención de requisitos<a class="headerlink" href="#tecnicas-para-obtencion-de-requisitos" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Entrevista Stakeholders</p></li>
+<li><p>Workshops Grupales</p></li>
+<li><p>Documentación</p></li>
+<li><p>Sistema existente o legado que se está actualizando</p></li>
+<li><p>Software similar</p></li>
+<li><p>Prototipos</p></li>
+<li><p>Observación directa</p></li>
+<li><p>Cuestionarios</p></li>
+<li><p>Lluvia de ideas</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="contextualizando-los-requisitos">
+<h2>Contextualizando los requisitos<a class="headerlink" href="#contextualizando-los-requisitos" title="Link to this heading">#</a></h2>
+<img src="_static/images/U4_7.png"/>
+</section>
+<hr class="docutils" />
+<section id="importancia-de-la-ingenieria-de-requisitos-meme">
+<h2>Importancia de la ingeniería de requisitos: MEME<a class="headerlink" href="#importancia-de-la-ingenieria-de-requisitos-meme" title="Link to this heading">#</a></h2>
+<img src="_static/images/U4_8.png"/>
+</section>
+<hr class="docutils" />
+<section id="costos-relativos-basados-en-el-tiempo-de-deteccion-de-errores">
+<h2>Costos relativos basados en el tiempo de detección de errores.<a class="headerlink" href="#costos-relativos-basados-en-el-tiempo-de-deteccion-de-errores" title="Link to this heading">#</a></h2>
+<p>Esta gráfica muestra el costo de corregir un error en cada una de las fases de un proceso de software para concientizar.</p>
+<div class="sd-sphinx-override sd-cards-carousel sd-card-cols-1 docutils">
+<div class="sd-card sd-sphinx-override sd-m-3 sd-shadow-sm docutils">
+<div class="sd-card-body text-center docutils">
+<img alt="_images/U4_9.png" src="_images/U4_9.png" />
+</div>
+</div>
+<div class="sd-card sd-sphinx-override sd-m-3 sd-shadow-sm docutils">
+<div class="sd-card-body text-center docutils">
+<img alt="_images/U4_10.png" src="_images/U4_10.png" />
+</div>
+</div>
+<div class="sd-card sd-sphinx-override sd-m-3 sd-shadow-sm docutils">
+<div class="sd-card-body text-center docutils">
+<img alt="_images/U4_11.png" src="_images/U4_11.png" />
+</div>
+</div>
+<div class="sd-card sd-sphinx-override sd-m-3 sd-shadow-sm docutils">
+<div class="sd-card-body text-center docutils">
+<img alt="_images/U4_12.png" src="_images/U4_12.png" />
+</div>
+</div>
+<div class="sd-card sd-sphinx-override sd-m-3 sd-shadow-sm docutils">
+<div class="sd-card-body text-center docutils">
+<img alt="_images/U4_13.png" src="_images/U4_13.png" />
+</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="actividades-para-describir-los-requerimientos">
+<h2>Actividades para describir los requerimientos<a class="headerlink" href="#actividades-para-describir-los-requerimientos" title="Link to this heading">#</a></h2>
+<img src="_static/images/U4_14.png"/>
+<hr class="docutils" />
+<section id="actividades-adquisicion-de-requisitos-elicitacion">
+<h3>Actividades: Adquisición de requisitos/Elicitación<a class="headerlink" href="#actividades-adquisicion-de-requisitos-elicitacion" title="Link to this heading">#</a></h3>
+<p>Es todo un conjunto de actividades para poder conocer el contexto y las necesidades de los clientes y usuarios, que se convertirán en los requisitos del sistema.</p>
+<p><strong>No se trata simplemente de recolectar información</strong></p>
+<section id="adquisicion-cuestionarios">
+<h4>Adquisición: Cuestionarios<a class="headerlink" href="#adquisicion-cuestionarios" title="Link to this heading">#</a></h4>
+<img src="_static/images/U4_15.png"/>
+</section>
+<hr class="docutils" />
+<section id="consideraciones-para-los-cuestionarios">
+<h4>Consideraciones para los cuestionarios<a class="headerlink" href="#consideraciones-para-los-cuestionarios" title="Link to this heading">#</a></h4>
+<img src="_static/images/U4_16.png"/>
+<hr class="docutils" />
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<h4 class="rubric" id="ejercicio">Ejercicio…</h4>
+<p>Se desea desarrollar un sistema de mesa de ayuda (soporte técnico). Se elaborará un cuestionario para los empleados de la empresa, que solicitan el soporte técnico.</p>
+<ol class="arabic simple">
+<li><p>Escriba un objetivo para este Cuestionario.</p></li>
+<li><p>Escriba por lo menos tres preguntas.</p></li>
+</ol>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="actividades-analisis">
+<h3>Actividades: Análisis<a class="headerlink" href="#actividades-analisis" title="Link to this heading">#</a></h3>
+<p>También se conoce como elaboración y negociación. Incluye actividades de organización, revisión y <strong>priorización</strong> de los requisitos.</p>
+<p>Permite obtener un conjunto más claro y refinado de los requisitos.</p>
+<img src="_static/images/U4_17.png"/>
+</section>
+<hr class="docutils" />
+<section id="actividades-especificacion">
+<h3>Actividades: Especificación<a class="headerlink" href="#actividades-especificacion" title="Link to this heading">#</a></h3>
+<p>También conocida como documentación. Los requisitos se representan <strong>usando diferentes modelos</strong>, como diagramas de contexto, de casos de uso, de actividades, conceptuales, etc.</p>
+<p>También se describen con mayor detalle usando lenguaje natural o formal,generalmente basado en formatos.</p>
+<img src="_static/images/U4_18.png"/>
+</section>
+<hr class="docutils" />
+<section id="actividades-validacion">
+<h3>Actividades: Validación<a class="headerlink" href="#actividades-validacion" title="Link to this heading">#</a></h3>
+<p>También conocida como verificación. Busca garantizar que los <strong>requisitos especificados cumplen lineamientos de calidad</strong> (completos, consistentes, no ambiguos, etc.). Además, el cliente o usuario revisan y <strong>confirman</strong> que los requisitos especificados corresponden a <strong>lo que realmente necesitan</strong>.</p>
+<img src="_static/images/U4_19.png"/>
+</section>
+<hr class="docutils" />
+<section id="actividades-administracion">
+<h3>Actividades: Administración<a class="headerlink" href="#actividades-administracion" title="Link to this heading">#</a></h3>
+<p>Involucra manejar versiones de los requisitos, tener procesos de cambio y actualizar la información y los planes correspondientes.</p>
+<p>Se encarga de <strong>controlar y hacer seguimiento a los requisitos y sus cambios</strong> durante el desarrollo y mantenimiento del software.</p>
+<img src="_static/images/U4_20.png"/>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Realizar la <strong>Actividad 1</strong> de la sección de evaluemos lo aprendido… <a class="reference internal" href="Unidades/Unidad_4/EvaluemosLoAprendido.html#actividadu4"><span class="std std-ref">Vamos allá</span></a>.</p>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contenido-de-la-unidad">Contenido de la unidad</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conceptos-basicos-de-la-ingenieria-de-requisitos">Conceptos básicos de la ingeniería de requisitos.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definicion-de-requisitos">Definición de requisitos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#que-dice-el-chatgpt">¿Qué dice el ChatGPT?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definicion-de-ingenieria-de-requisitos">Definición de “Ingeniería de requisitos”</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definicion-formal-de-ingenieria-de-requisitos">Definición formal de “Ingeniería de requisitos”</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#propiedades-de-un-requisito">Propiedades de un requisito</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#de-donde-obtengo-los-requisitos-fuentes-generales-de-requisitos">¿De donde obtengo los requisitos?: <em>Fuentes generales de requisitos</em></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grupos-de-interes-stakeholders">Grupos de interés: <em>“Stakeholders”</em></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#de-donde-vienen-los-requisitos">¿De dónde vienen los requisitos?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tecnicas-para-obtencion-de-requisitos">Técnicas para obtención de requisitos</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contextualizando-los-requisitos">Contextualizando los requisitos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importancia-de-la-ingenieria-de-requisitos-meme">Importancia de la ingeniería de requisitos: MEME</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#costos-relativos-basados-en-el-tiempo-de-deteccion-de-errores">Costos relativos basados en el tiempo de detección de errores.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#actividades-para-describir-los-requerimientos">Actividades para describir los requerimientos</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#actividades-adquisicion-de-requisitos-elicitacion">Actividades: Adquisición de requisitos/Elicitación</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#adquisicion-cuestionarios">Adquisición: Cuestionarios</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#consideraciones-para-los-cuestionarios">Consideraciones para los cuestionarios</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#actividades-analisis">Actividades: Análisis</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#actividades-especificacion">Actividades: Especificación</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#actividades-validacion">Actividades: Validación</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#actividades-administracion">Actividades: Administración</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Reinel Tabares, Johan Piña, Brayan Arteaga
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

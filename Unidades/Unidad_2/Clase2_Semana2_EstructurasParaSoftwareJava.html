@@ -1,0 +1,991 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Repaso Estructuras Java Vs Python &#8212; Desarrollo de Software II 2024 - 01</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=afe5de03"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Unidades/Unidad_2/Clase2_Semana2_EstructurasParaSoftwareJava';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="https://avatars.githubusercontent.com/u/142033488?s=200&v=4" class="logo__image only-light" alt="Desarrollo de Software II 2024 - 01 - Home"/>
+    <script>document.write(`<img src="https://avatars.githubusercontent.com/u/142033488?s=200&v=4" class="logo__image only-dark" alt="Desarrollo de Software II 2024 - 01 - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Desarrollo de Software II
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../Unidad1.html">Unidad 1: Desarrollo en Equipo</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/BioAITeamLearning/SoftwareII_2024_01_Ucaldas/blob/main/Unidades/Unidad_2/Clase2_Semana2_EstructurasParaSoftwareJava.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/BioAITeamLearning/SoftwareII_2024_01_Ucaldas" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/BioAITeamLearning/SoftwareII_2024_01_Ucaldas/issues/new?title=Issue%20on%20page%20%2FUnidades/Unidad_2/Clase2_Semana2_EstructurasParaSoftwareJava.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/Unidades/Unidad_2/Clase2_Semana2_EstructurasParaSoftwareJava.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Repaso Estructuras Java Vs Python</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Repaso Estructuras Java Vs Python</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hola-mundo-en-java-desde-colab">Hola Mundo en Java desde Colab</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#recordemos-que-objeto-y-clase-son-similares-pero-no-lo-mismo"><strong>Recordemos que objeto y clase son similares, ¡pero no lo mismo!</strong>:</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#definicion-de-clases"><strong>Definición de clases</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#herencia-de-clases">Herencia de clases</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#polimorfismo">Polimorfismo</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#polimorfismo-y-clases-abstractas">Polimorfismo y clases abstractas</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#decoradores">Decoradores</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#interfaces">Interfaces</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#consumo-de-api-s-usando-modulos-de-java">Consumo de API’s usando módulos de Java</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="repaso-estructuras-java-vs-python">
+<h1>Repaso Estructuras Java Vs Python<a class="headerlink" href="#repaso-estructuras-java-vs-python" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="err">#</span><span class="nd">@title</span><span class="w"> </span><span class="n">Celda</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">configuración</span><span class="w"> </span><span class="n">del</span><span class="w"> </span><span class="n">notebook</span><span class="w"> </span><span class="n">para</span><span class="w"> </span><span class="n">Java</span>
+<span class="err">#</span><span class="nd">@markdown</span><span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="n">Ejecute</span><span class="w"> </span><span class="n">esta</span><span class="w"> </span><span class="n">celda</span><span class="w"> </span><span class="n">para</span><span class="w"> </span><span class="n">configurar</span><span class="w"> </span><span class="n">el</span><span class="w"> </span><span class="n">entorno</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">java</span>
+
+<span class="o">%%</span><span class="n">bash</span>
+<span class="err">#</span><span class="o">!/</span><span class="n">usr</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">env</span><span class="w"> </span><span class="n">bash</span>
+
+<span class="n">echo</span><span class="w"> </span><span class="s">&quot;Update environment...&quot;</span>
+<span class="n">apt</span><span class="w"> </span><span class="n">update</span><span class="w"> </span><span class="o">-</span><span class="n">q</span><span class="w">  </span><span class="o">&amp;&gt;</span><span class="w"> </span><span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="kc">null</span>
+
+<span class="n">echo</span><span class="w"> </span><span class="s">&quot;Install Java...&quot;</span>
+<span class="n">apt</span><span class="o">-</span><span class="n">get</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="o">-</span><span class="n">q</span><span class="w"> </span><span class="n">openjdk</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="n">jdk</span><span class="o">-</span><span class="n">headless</span><span class="w"> </span><span class="o">&amp;&gt;</span><span class="w"> </span><span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="kc">null</span>
+
+<span class="n">echo</span><span class="w"> </span><span class="s">&quot;Install Jupyter java kernel...&quot;</span>
+<span class="n">curl</span><span class="w"> </span><span class="o">-</span><span class="n">L</span><span class="w"> </span><span class="n">https</span><span class="p">:</span><span class="c1">//github.com/SpencerPark/IJava/releases/download/v1.3.0/ijava-1.3.0.zip \</span>
+<span class="w"> </span><span class="o">-</span><span class="n">o</span><span class="w"> </span><span class="n">ijava</span><span class="o">-</span><span class="n">kernel</span><span class="p">.</span><span class="na">zip</span><span class="w"> </span><span class="o">&amp;&gt;</span><span class="w"> </span><span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="kc">null</span>
+
+<span class="n">unzip</span><span class="w"> </span><span class="o">-</span><span class="n">q</span><span class="w"> </span><span class="n">ijava</span><span class="o">-</span><span class="n">kernel</span><span class="p">.</span><span class="na">zip</span><span class="w"> </span><span class="o">-</span><span class="n">d</span><span class="w"> </span><span class="n">ijava</span><span class="o">-</span><span class="n">kernel</span><span class="w"> </span><span class="err">\</span>
+<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">cd</span><span class="w"> </span><span class="n">ijava</span><span class="o">-</span><span class="n">kernel</span><span class="w"> </span><span class="err">\</span>
+<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">python3</span><span class="w"> </span><span class="n">install</span><span class="p">.</span><span class="na">py</span><span class="w"> </span><span class="o">--</span><span class="n">sys</span><span class="o">-</span><span class="n">prefix</span><span class="w"> </span><span class="o">&amp;&gt;</span><span class="w"> </span><span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="kc">null</span>
+
+<span class="n">echo</span><span class="w"> </span><span class="s">&quot;Install proxy for the java kernel&quot;</span>
+<span class="err">#</span><span class="w"> </span><span class="n">NOTE</span><span class="p">:</span><span class="w"> </span><span class="n">required</span><span class="w"> </span><span class="n">after</span><span class="w"> </span><span class="n">changes</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">Google</span><span class="w"> </span><span class="n">Colab</span><span class="w"> </span><span class="n">defaults</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">Dec</span><span class="p">.</span><span class="w"> </span><span class="mi">2022</span>
+<span class="err">#</span><span class="w"> </span><span class="n">See</span><span class="w"> </span><span class="n">https</span><span class="p">:</span><span class="c1">//stackoverflow.com/questions/74674688/google-colab-notebook-using-ijava-stuck-at-connecting-after-installation-ref/74821762#74821762</span>
+
+<span class="n">wget</span><span class="w"> </span><span class="o">-</span><span class="n">qO</span><span class="o">-</span><span class="w"> </span><span class="n">https</span><span class="p">:</span><span class="c1">//gist.github.com/SpencerPark/e2732061ad19c1afa4a33a58cb8f18a9/archive/b6cff2bf09b6832344e576ea1e4731f0fb3df10c.tar.gz | tar xvz --strip-components=1</span>
+<span class="n">python</span><span class="w"> </span><span class="n">install_ipc_proxy_kernel</span><span class="p">.</span><span class="na">py</span><span class="w"> </span><span class="o">--</span><span class="n">kernel</span><span class="o">=</span><span class="n">java</span><span class="w"> </span><span class="o">--</span><span class="n">implementation</span><span class="o">=</span><span class="n">ipc_proxy_kernel</span><span class="p">.</span><span class="na">py</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Update environment...
+Install Java...
+Install Jupyter java kernel...
+Install proxy for the java kernel
+e2732061ad19c1afa4a33a58cb8f18a9-b6cff2bf09b6832344e576ea1e4731f0fb3df10c/install_ipc_proxy_kernel.py
+e2732061ad19c1afa4a33a58cb8f18a9-b6cff2bf09b6832344e576ea1e4731f0fb3df10c/ipc_proxy_kernel.py
+Moving java kernel from /usr/share/jupyter/kernels/java...
+Wrote modified kernel.json for java_tcp in /usr/share/jupyter/kernels/java_tcp/kernel.json
+Installing the proxy kernel in place of java in /usr/share/jupyter/kernels/java
+Installed proxy kernelspec: {&quot;argv&quot;: [&quot;/usr/bin/python3&quot;, &quot;/usr/share/jupyter/kernels/java/ipc_proxy_kernel.py&quot;, &quot;{connection_file}&quot;, &quot;--kernel=java_tcp&quot;], &quot;env&quot;: {}, &quot;display_name&quot;: &quot;Java&quot;, &quot;language&quot;: &quot;java&quot;, &quot;interrupt_mode&quot;: &quot;message&quot;, &quot;metadata&quot;: {}}
+Proxy kernel installed. Go to &#39;Runtime &gt; Change runtime type&#39; and select &#39;java&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<section id="hola-mundo-en-java-desde-colab">
+<h2>Hola Mundo en Java desde Colab<a class="headerlink" href="#hola-mundo-en-java-desde-colab" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hola mundo en Colab desde Java&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hola mundo en Colab desde Java
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="recordemos-que-objeto-y-clase-son-similares-pero-no-lo-mismo">
+<h1><strong>Recordemos que objeto y clase son similares, ¡pero no lo mismo!</strong>:<a class="headerlink" href="#recordemos-que-objeto-y-clase-son-similares-pero-no-lo-mismo" title="Link to this heading">#</a></h1>
+<p>Clase y objeto son términos que se utilizan en programación orientada a objetos (OOP, por sus siglas en inglés). En este paradigma, una clase es una plantilla para crear objetos que comparten una estructura de datos y un comportamiento común.</p>
+<p>Por otro lado, un objeto es una instancia de una clase, es decir, es una representación concreta de una clase con valores específicos para sus atributos y métodos. Cada objeto puede tener valores distintos para los atributos y comportarse de manera diferente según las acciones que se le apliquen.</p>
+</section>
+<section id="definicion-de-clases">
+<h1><strong>Definición de clases</strong><a class="headerlink" href="#definicion-de-clases" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">//Definimos la clase</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Vehicle</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">//Se definen los atributos de la clase</span>
+<span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">make</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">model</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">year</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Declaramos el constructor de la clase</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Vehicle</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">make</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">model</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">year</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">make</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">make</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">model</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">model</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">year</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">year</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Métodos de la clase</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getDescriptiveName</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">longName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">year</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">make</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">model</span><span class="p">;</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">longName</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Instanciar una clase</span>
+<span class="n">Vehicle</span><span class="w"> </span><span class="n">myCar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Vehicle</span><span class="p">(</span><span class="s">&quot;bmw&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;x5&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">2022</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">myCar</span><span class="p">.</span><span class="na">getDescriptiveName</span><span class="p">());</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2022 BMW X5
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="herencia-de-clases">
+<h1>Herencia de clases<a class="headerlink" href="#herencia-de-clases" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Vamos a crear una clase carro que hereda de la clase vehículo</span>
+<span class="kd">class</span> <span class="nc">Car</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Vehicle</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">numDoors</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Car</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">make</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">model</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">year</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">numDoors</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">super</span><span class="p">(</span><span class="n">make</span><span class="p">,</span><span class="w"> </span><span class="n">model</span><span class="p">,</span><span class="w"> </span><span class="n">year</span><span class="p">);</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">numDoors</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">numDoors</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">      </span><span class="c1">// en caso de que la variable fuera privada y se desea acceder al atributo se necesita los gets a sets</span>
+<span class="w">     </span><span class="c1">//public int getNumDoors() {</span>
+<span class="w">    </span><span class="c1">//    return numDoors;</span>
+<span class="w">    </span><span class="c1">//}</span>
+<span class="w">        </span><span class="c1">// Métodos de la clase -- metodo sobrecargado para poder imprimir el numero de puertas</span>
+<span class="w">    </span><span class="c1">//@Override</span>
+<span class="w">    </span><span class="c1">//public String getDescriptiveName() {</span>
+<span class="w">    </span><span class="c1">//    String longName = year + &quot; &quot; + make + &quot; &quot; + model+&quot; &quot;+numDoors;</span>
+<span class="w">    </span><span class="c1">//    return longName.toUpperCase();</span>
+<span class="w">    </span><span class="c1">//}</span>
+<span class="p">}</span>
+
+<span class="n">Car</span><span class="w"> </span><span class="n">myCar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Car</span><span class="p">(</span><span class="s">&quot;bmw&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;x5&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">2022</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">myCar</span><span class="p">.</span><span class="na">getDescriptiveName</span><span class="p">());</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2022 BMW X5
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">myCar</span><span class="p">.</span><span class="na">numDoors</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="polimorfismo">
+<h1>Polimorfismo<a class="headerlink" href="#polimorfismo" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Clase Animal</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Animal</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Animal</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">hacerSonido</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Haciendo sonido de animal&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Clase Perro que extiende de Animal</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Perro</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Animal</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Perro</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">super</span><span class="p">(</span><span class="n">name</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">hacerSonido</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Guau guau!&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Clase Gato que extiende de Animal</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Gato</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Animal</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Gato</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">super</span><span class="p">(</span><span class="n">name</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">hacerSonido</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Miau miau!&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Animal</span><span class="w"> </span><span class="n">animal1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Perro</span><span class="p">(</span><span class="s">&quot;Fido&quot;</span><span class="p">);</span>
+<span class="n">Animal</span><span class="w"> </span><span class="n">animal2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Gato</span><span class="p">(</span><span class="s">&quot;Pepe&quot;</span><span class="p">);</span>
+
+<span class="n">animal1</span><span class="p">.</span><span class="na">hacerSonido</span><span class="p">();</span><span class="w"> </span><span class="c1">// Salida: Guau guau!</span>
+<span class="n">animal2</span><span class="p">.</span><span class="na">hacerSonido</span><span class="p">();</span><span class="w"> </span><span class="c1">// Salida: Miau miau!</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Haciendo sonido de animal
+Miau miau!
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="polimorfismo-y-clases-abstractas">
+<h1>Polimorfismo y clases abstractas<a class="headerlink" href="#polimorfismo-y-clases-abstractas" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Definimos una clase padre</span>
+<span class="kd">abstract</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Animal</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Animal</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">abstract</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">speak</span><span class="p">();</span>
+
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Creamos una clase perro y otra gato que hereda los métodos de Animal.</span>
+<span class="kd">class</span> <span class="nc">Dog</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Animal</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Dog</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">super</span><span class="p">(</span><span class="n">name</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Se modifica el método speak</span>
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">speak</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Woof!&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">Cat</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Animal</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Cat</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">super</span><span class="p">(</span><span class="n">name</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">speak</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Meow!&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">petSpeak</span><span class="p">(</span><span class="n">Animal</span><span class="w"> </span><span class="n">pet</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">pet</span><span class="p">.</span><span class="na">speak</span><span class="p">());</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Instanciamos la clase perro</span>
+<span class="n">Dog</span><span class="w"> </span><span class="n">dog</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Dog</span><span class="p">(</span><span class="s">&quot;Fido&quot;</span><span class="p">);</span>
+<span class="n">Cat</span><span class="w"> </span><span class="n">cat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Cat</span><span class="p">(</span><span class="s">&quot;Fluffy&quot;</span><span class="p">);</span>
+
+<span class="c1">// Llamamos la función speak para cada objeto</span>
+<span class="n">petSpeak</span><span class="p">(</span><span class="n">dog</span><span class="p">);</span>
+<span class="n">petSpeak</span><span class="p">(</span><span class="n">cat</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Woof!
+Meow!
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="decoradores">
+<h1>Decoradores<a class="headerlink" href="#decoradores" title="Link to this heading">#</a></h1>
+<p>En java no existe el concepto de decoradores como en Python</p>
+</section>
+<section id="interfaces">
+<h1>Interfaces<a class="headerlink" href="#interfaces" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">interface</span> <span class="nc">Shape</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="nf">area</span><span class="p">();</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="nf">perimeter</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">Rectangle</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Shape</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">width</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">height</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Rectangle</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">height</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">width</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">height</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">area</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">width</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">height</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">perimeter</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">width</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">height</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">Circle</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Shape</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">radius</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Circle</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">radius</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">radius</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">radius</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">area</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mf">3.14</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">radius</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">radius</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">perimeter</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">3.14</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">radius</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>En este ejemplo, se define la interfaz <em>Shape</em> con los métodos <em>area()</em> y <em>perimeter()</em>. Luego, se implementan las clases <em>Rectangle</em> y <em>Circle</em>, que implementan la interfaz <em>Shape</em> y proporcionan sus propias implementaciones de los métodos <em>area()</em> y <em>perimeter()</em>.</p>
+<p>En la implementación de las clases <em>Rectangle</em> y <em>Circle</em>, se utilizan las anotaciones <em>&#64;Override</em> para indicar que se están anulando los métodos de la interfaz <em>Shape</em>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Rectangle</span><span class="w"> </span><span class="n">rectangle</span><span class="o">=</span><span class="k">new</span><span class="w"> </span><span class="n">Rectangle</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">rectangle</span><span class="p">.</span><span class="na">area</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>12.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">rectangle</span><span class="p">.</span><span class="na">perimeter</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>14.0
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="consumo-de-api-s-usando-modulos-de-java">
+<h1>Consumo de API’s usando módulos de Java<a class="headerlink" href="#consumo-de-api-s-usando-modulos-de-java" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.BufferedReader</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.io.IOException</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.io.InputStreamReader</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.net.HttpURLConnection</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.net.URL</span><span class="p">;</span>
+
+
+<span class="n">URL</span><span class="w"> </span><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">URL</span><span class="p">(</span><span class="s">&quot;https://pokeapi.co/api/v2/pokemon?limit=151&quot;</span><span class="p">);</span>
+<span class="n">HttpURLConnection</span><span class="w"> </span><span class="n">connection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">HttpURLConnection</span><span class="p">)</span><span class="w"> </span><span class="n">url</span><span class="p">.</span><span class="na">openConnection</span><span class="p">();</span>
+<span class="n">connection</span><span class="p">.</span><span class="na">setRequestMethod</span><span class="p">(</span><span class="s">&quot;GET&quot;</span><span class="p">);</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">connection</span><span class="p">.</span><span class="na">getResponseCode</span><span class="p">();</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">status</span><span class="p">);</span>
+
+<span class="n">BufferedReader</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">BufferedReader</span><span class="p">(</span>
+<span class="w">        </span><span class="k">new</span><span class="w"> </span><span class="n">InputStreamReader</span><span class="p">(</span><span class="n">connection</span><span class="p">.</span><span class="na">getInputStream</span><span class="p">())</span>
+<span class="p">);</span>
+<span class="n">StringBuilder</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">StringBuilder</span><span class="p">();</span>
+<span class="n">String</span><span class="w"> </span><span class="n">inputLine</span><span class="p">;</span>
+<span class="k">while</span><span class="w"> </span><span class="p">((</span><span class="n">inputLine</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">input</span><span class="p">.</span><span class="na">readLine</span><span class="p">())</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">response</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="n">inputLine</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="n">input</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>200
+{&quot;count&quot;:1279,&quot;next&quot;:&quot;https://pokeapi.co/api/v2/pokemon?offset=151&amp;limit=151&quot;,&quot;previous&quot;:null,&quot;results&quot;:[{&quot;name&quot;:&quot;bulbasaur&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/1/&quot;},{&quot;name&quot;:&quot;ivysaur&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/2/&quot;},{&quot;name&quot;:&quot;venusaur&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/3/&quot;},{&quot;name&quot;:&quot;charmander&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/4/&quot;},{&quot;name&quot;:&quot;charmeleon&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/5/&quot;},{&quot;name&quot;:&quot;charizard&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/6/&quot;},{&quot;name&quot;:&quot;squirtle&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/7/&quot;},{&quot;name&quot;:&quot;wartortle&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/8/&quot;},{&quot;name&quot;:&quot;blastoise&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/9/&quot;},{&quot;name&quot;:&quot;caterpie&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/10/&quot;},{&quot;name&quot;:&quot;metapod&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/11/&quot;},{&quot;name&quot;:&quot;butterfree&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/12/&quot;},{&quot;name&quot;:&quot;weedle&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/13/&quot;},{&quot;name&quot;:&quot;kakuna&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/14/&quot;},{&quot;name&quot;:&quot;beedrill&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/15/&quot;},{&quot;name&quot;:&quot;pidgey&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/16/&quot;},{&quot;name&quot;:&quot;pidgeotto&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/17/&quot;},{&quot;name&quot;:&quot;pidgeot&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/18/&quot;},{&quot;name&quot;:&quot;rattata&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/19/&quot;},{&quot;name&quot;:&quot;raticate&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/20/&quot;},{&quot;name&quot;:&quot;spearow&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/21/&quot;},{&quot;name&quot;:&quot;fearow&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/22/&quot;},{&quot;name&quot;:&quot;ekans&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/23/&quot;},{&quot;name&quot;:&quot;arbok&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/24/&quot;},{&quot;name&quot;:&quot;pikachu&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/25/&quot;},{&quot;name&quot;:&quot;raichu&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/26/&quot;},{&quot;name&quot;:&quot;sandshrew&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/27/&quot;},{&quot;name&quot;:&quot;sandslash&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/28/&quot;},{&quot;name&quot;:&quot;nidoran-f&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/29/&quot;},{&quot;name&quot;:&quot;nidorina&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/30/&quot;},{&quot;name&quot;:&quot;nidoqueen&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/31/&quot;},{&quot;name&quot;:&quot;nidoran-m&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/32/&quot;},{&quot;name&quot;:&quot;nidorino&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/33/&quot;},{&quot;name&quot;:&quot;nidoking&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/34/&quot;},{&quot;name&quot;:&quot;clefairy&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/35/&quot;},{&quot;name&quot;:&quot;clefable&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/36/&quot;},{&quot;name&quot;:&quot;vulpix&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/37/&quot;},{&quot;name&quot;:&quot;ninetales&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/38/&quot;},{&quot;name&quot;:&quot;jigglypuff&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/39/&quot;},{&quot;name&quot;:&quot;wigglytuff&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/40/&quot;},{&quot;name&quot;:&quot;zubat&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/41/&quot;},{&quot;name&quot;:&quot;golbat&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/42/&quot;},{&quot;name&quot;:&quot;oddish&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/43/&quot;},{&quot;name&quot;:&quot;gloom&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/44/&quot;},{&quot;name&quot;:&quot;vileplume&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/45/&quot;},{&quot;name&quot;:&quot;paras&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/46/&quot;},{&quot;name&quot;:&quot;parasect&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/47/&quot;},{&quot;name&quot;:&quot;venonat&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/48/&quot;},{&quot;name&quot;:&quot;venomoth&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/49/&quot;},{&quot;name&quot;:&quot;diglett&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/50/&quot;},{&quot;name&quot;:&quot;dugtrio&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/51/&quot;},{&quot;name&quot;:&quot;meowth&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/52/&quot;},{&quot;name&quot;:&quot;persian&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/53/&quot;},{&quot;name&quot;:&quot;psyduck&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/54/&quot;},{&quot;name&quot;:&quot;golduck&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/55/&quot;},{&quot;name&quot;:&quot;mankey&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/56/&quot;},{&quot;name&quot;:&quot;primeape&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/57/&quot;},{&quot;name&quot;:&quot;growlithe&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/58/&quot;},{&quot;name&quot;:&quot;arcanine&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/59/&quot;},{&quot;name&quot;:&quot;poliwag&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/60/&quot;},{&quot;name&quot;:&quot;poliwhirl&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/61/&quot;},{&quot;name&quot;:&quot;poliwrath&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/62/&quot;},{&quot;name&quot;:&quot;abra&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/63/&quot;},{&quot;name&quot;:&quot;kadabra&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/64/&quot;},{&quot;name&quot;:&quot;alakazam&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/65/&quot;},{&quot;name&quot;:&quot;machop&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/66/&quot;},{&quot;name&quot;:&quot;machoke&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/67/&quot;},{&quot;name&quot;:&quot;machamp&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/68/&quot;},{&quot;name&quot;:&quot;bellsprout&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/69/&quot;},{&quot;name&quot;:&quot;weepinbell&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/70/&quot;},{&quot;name&quot;:&quot;victreebel&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/71/&quot;},{&quot;name&quot;:&quot;tentacool&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/72/&quot;},{&quot;name&quot;:&quot;tentacruel&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/73/&quot;},{&quot;name&quot;:&quot;geodude&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/74/&quot;},{&quot;name&quot;:&quot;graveler&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/75/&quot;},{&quot;name&quot;:&quot;golem&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/76/&quot;},{&quot;name&quot;:&quot;ponyta&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/77/&quot;},{&quot;name&quot;:&quot;rapidash&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/78/&quot;},{&quot;name&quot;:&quot;slowpoke&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/79/&quot;},{&quot;name&quot;:&quot;slowbro&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/80/&quot;},{&quot;name&quot;:&quot;magnemite&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/81/&quot;},{&quot;name&quot;:&quot;magneton&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/82/&quot;},{&quot;name&quot;:&quot;farfetchd&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/83/&quot;},{&quot;name&quot;:&quot;doduo&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/84/&quot;},{&quot;name&quot;:&quot;dodrio&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/85/&quot;},{&quot;name&quot;:&quot;seel&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/86/&quot;},{&quot;name&quot;:&quot;dewgong&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/87/&quot;},{&quot;name&quot;:&quot;grimer&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/88/&quot;},{&quot;name&quot;:&quot;muk&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/89/&quot;},{&quot;name&quot;:&quot;shellder&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/90/&quot;},{&quot;name&quot;:&quot;cloyster&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/91/&quot;},{&quot;name&quot;:&quot;gastly&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/92/&quot;},{&quot;name&quot;:&quot;haunter&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/93/&quot;},{&quot;name&quot;:&quot;gengar&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/94/&quot;},{&quot;name&quot;:&quot;onix&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/95/&quot;},{&quot;name&quot;:&quot;drowzee&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/96/&quot;},{&quot;name&quot;:&quot;hypno&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/97/&quot;},{&quot;name&quot;:&quot;krabby&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/98/&quot;},{&quot;name&quot;:&quot;kingler&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/99/&quot;},{&quot;name&quot;:&quot;voltorb&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/100/&quot;},{&quot;name&quot;:&quot;electrode&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/101/&quot;},{&quot;name&quot;:&quot;exeggcute&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/102/&quot;},{&quot;name&quot;:&quot;exeggutor&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/103/&quot;},{&quot;name&quot;:&quot;cubone&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/104/&quot;},{&quot;name&quot;:&quot;marowak&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/105/&quot;},{&quot;name&quot;:&quot;hitmonlee&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/106/&quot;},{&quot;name&quot;:&quot;hitmonchan&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/107/&quot;},{&quot;name&quot;:&quot;lickitung&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/108/&quot;},{&quot;name&quot;:&quot;koffing&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/109/&quot;},{&quot;name&quot;:&quot;weezing&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/110/&quot;},{&quot;name&quot;:&quot;rhyhorn&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/111/&quot;},{&quot;name&quot;:&quot;rhydon&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/112/&quot;},{&quot;name&quot;:&quot;chansey&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/113/&quot;},{&quot;name&quot;:&quot;tangela&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/114/&quot;},{&quot;name&quot;:&quot;kangaskhan&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/115/&quot;},{&quot;name&quot;:&quot;horsea&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/116/&quot;},{&quot;name&quot;:&quot;seadra&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/117/&quot;},{&quot;name&quot;:&quot;goldeen&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/118/&quot;},{&quot;name&quot;:&quot;seaking&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/119/&quot;},{&quot;name&quot;:&quot;staryu&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/120/&quot;},{&quot;name&quot;:&quot;starmie&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/121/&quot;},{&quot;name&quot;:&quot;mr-mime&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/122/&quot;},{&quot;name&quot;:&quot;scyther&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/123/&quot;},{&quot;name&quot;:&quot;jynx&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/124/&quot;},{&quot;name&quot;:&quot;electabuzz&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/125/&quot;},{&quot;name&quot;:&quot;magmar&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/126/&quot;},{&quot;name&quot;:&quot;pinsir&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/127/&quot;},{&quot;name&quot;:&quot;tauros&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/128/&quot;},{&quot;name&quot;:&quot;magikarp&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/129/&quot;},{&quot;name&quot;:&quot;gyarados&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/130/&quot;},{&quot;name&quot;:&quot;lapras&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/131/&quot;},{&quot;name&quot;:&quot;ditto&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/132/&quot;},{&quot;name&quot;:&quot;eevee&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/133/&quot;},{&quot;name&quot;:&quot;vaporeon&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/134/&quot;},{&quot;name&quot;:&quot;jolteon&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/135/&quot;},{&quot;name&quot;:&quot;flareon&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/136/&quot;},{&quot;name&quot;:&quot;porygon&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/137/&quot;},{&quot;name&quot;:&quot;omanyte&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/138/&quot;},{&quot;name&quot;:&quot;omastar&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/139/&quot;},{&quot;name&quot;:&quot;kabuto&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/140/&quot;},{&quot;name&quot;:&quot;kabutops&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/141/&quot;},{&quot;name&quot;:&quot;aerodactyl&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/142/&quot;},{&quot;name&quot;:&quot;snorlax&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/143/&quot;},{&quot;name&quot;:&quot;articuno&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/144/&quot;},{&quot;name&quot;:&quot;zapdos&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/145/&quot;},{&quot;name&quot;:&quot;moltres&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/146/&quot;},{&quot;name&quot;:&quot;dratini&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/147/&quot;},{&quot;name&quot;:&quot;dragonair&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/148/&quot;},{&quot;name&quot;:&quot;dragonite&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/149/&quot;},{&quot;name&quot;:&quot;mewtwo&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/150/&quot;},{&quot;name&quot;:&quot;mew&quot;,&quot;url&quot;:&quot;https://pokeapi.co/api/v2/pokemon/151/&quot;}]}
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "java"
+        },
+        kernelOptions: {
+            name: "java",
+            path: "./Unidades/Unidad_2"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'java'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Repaso Estructuras Java Vs Python</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hola-mundo-en-java-desde-colab">Hola Mundo en Java desde Colab</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#recordemos-que-objeto-y-clase-son-similares-pero-no-lo-mismo"><strong>Recordemos que objeto y clase son similares, ¡pero no lo mismo!</strong>:</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#definicion-de-clases"><strong>Definición de clases</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#herencia-de-clases">Herencia de clases</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#polimorfismo">Polimorfismo</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#polimorfismo-y-clases-abstractas">Polimorfismo y clases abstractas</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#decoradores">Decoradores</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#interfaces">Interfaces</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#consumo-de-api-s-usando-modulos-de-java">Consumo de API’s usando módulos de Java</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Reinel Tabares, Johan Piña, Brayan Arteaga
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

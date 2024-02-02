@@ -1,0 +1,988 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Integrantes y roles de un equipo de desarrollo &#8212; Desarrollo de Software II 2024 - 01</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=afe5de03"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Unidades/Unidad_1/clase1_2';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="https://avatars.githubusercontent.com/u/142033488?s=200&v=4" class="logo__image only-light" alt="Desarrollo de Software II 2024 - 01 - Home"/>
+    <script>document.write(`<img src="https://avatars.githubusercontent.com/u/142033488?s=200&v=4" class="logo__image only-dark" alt="Desarrollo de Software II 2024 - 01 - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Desarrollo de Software II
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../Unidad1.html">Unidad 1: Desarrollo en Equipo</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/BioAITeamLearning/SoftwareII_2024_01_Ucaldas" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/BioAITeamLearning/SoftwareII_2024_01_Ucaldas/issues/new?title=Issue%20on%20page%20%2FUnidades/Unidad_1/clase1_2.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/Unidades/Unidad_1/clase1_2.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Integrantes y roles de un equipo de desarrollo</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#por-que-trabajar-en-equipo">¿Por qué trabajar en equipo?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#roles-del-equipo">Roles del equipo</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#coach">Coach:</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#actividades">Actividades</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#actividad-en-grupo">Actividad en grupo!!</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vamos-a-crear-nuestros-equipos">Vamos a crear nuestros equipos</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proceso-de-desarrollo-de-software-tsp">Proceso de desarrollo de software: TSP</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estructura-del-tsp">Estructura del TSP</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#desarrollo-en-ciclos">Desarrollo en ciclos</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fases-de-tsp">Fases de TSP</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lanzamiento-de-procesos-tsp">Lanzamiento de procesos TSP</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ciclo-de-vida-de-tsp-en-la-practica">Ciclo de vida de TSP en la práctica</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#la-estrategia-de-desarrollo">La estrategia de desarrollo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elaboracion-de-los-planes">Elaboración de los planes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#planeacion-de-tareas">Planeación de tareas</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estimar-recursos">Estimar recursos</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Planeación de tareas</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#construccion-de-planes-individuales">Construcción de planes individuales</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#planeacion-de-la-calidad">Planeación de la calidad</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#actividades-de-calidad">Actividades de calidad</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#produccion-de-un-plan-de-calidad">Producción de un plan de calidad</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplo-de-un-plan-de-calidad">Ejemplo de un plan de calidad</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#los-planes-se-deben-relacionar">Los planes se deben relacionar</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estrategias-de-comunicacion">Estrategias de comunicación</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definir-las-reglas">Definir las reglas</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#otras-formas-de-comunicacion">Otras formas de comunicación</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#apliquemos-lo-aprendido">Apliquemos lo aprendido!! 🧠</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="integrantes-y-roles-de-un-equipo-de-desarrollo">
+<h1>Integrantes y roles de un equipo de desarrollo<a class="headerlink" href="#integrantes-y-roles-de-un-equipo-de-desarrollo" title="Link to this heading">#</a></h1>
+<img src="https://www.giitic.com/img/software/fabrica1.png?pfdrid_c=true"/>
+<section id="por-que-trabajar-en-equipo">
+<h2>¿Por qué trabajar en equipo?<a class="headerlink" href="#por-que-trabajar-en-equipo" title="Link to this heading">#</a></h2>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 text-center docutils">
+<div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-2 sd-row-cols-lg-2 sd-g-3 sd-g-xs-3 sd-g-sm-3 sd-g-md-3 sd-g-lg-3 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-header bg-light docutils">
+<p class="sd-card-text"><strong>💡</strong></p>
+</div>
+<div class="sd-card-body docutils">
+<p class="sd-card-text">El desarrollo de software no es solo codificar</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-header bg-light docutils">
+<p class="sd-card-text"><strong>💡</strong></p>
+</div>
+<div class="sd-card-body docutils">
+<p class="sd-card-text">Se mide el comportamiento del equipo en conjunto, no individual</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-header bg-light docutils">
+<p class="sd-card-text"><strong>💡</strong></p>
+</div>
+<div class="sd-card-body docutils">
+<p class="sd-card-text">Formar un equipo sólido requiere tiempo</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-header bg-light docutils">
+<p class="sd-card-text"><strong>💡</strong></p>
+</div>
+<div class="sd-card-body docutils">
+<p class="sd-card-text">Todos participan en el proceso de implementación</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="roles-del-equipo">
+<h2>Roles del equipo<a class="headerlink" href="#roles-del-equipo" title="Link to this heading">#</a></h2>
+<section id="coach">
+<h3>Coach:<a class="headerlink" href="#coach" title="Link to this heading">#</a></h3>
+<p>Pertenece al entorno académico (Docente)</p>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-g-3 sd-g-xs-3 sd-g-sm-3 sd-g-md-3 sd-g-lg-3 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-header bg-light text-center docutils">
+<a class="rounded reference internal image-reference" href="../../_images/rts.png"><img alt="../../_images/rts.png" class="rounded" src="../../_images/rts.png" style="height: 100px;" /></a>
+</div>
+<div class="sd-card-body text-center docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Ph.D. Reinel Tabares</div>
+<p class="sd-card-text"><a class="reference external" href="mailto:reinel&#46;tabares&#37;&#52;&#48;ucaldas&#46;edu&#46;co"><img src="https://seeklogo.com/images/G/gmail-new-2020-logo-32DBE11BB4-seeklogo.com.png" width="25" height="20"></a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section id="actividades">
+<h4>Actividades<a class="headerlink" href="#actividades" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Definir los criterios de evaluación.</p></li>
+<li><p>Guiar la asignación de roles.</p></li>
+<li><p>Verificar el cumplimento de las actividades por roles.</p></li>
+<li><p>Evaluar la calidad de las entregas, de acuerdo con lo planeado.</p></li>
+</ul>
+<hr class="docutils" />
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Lider<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">El líder conduce el grupo y se asegura de que todos los integrantes reportan sus datos del proceso y terminan su trabajo como se planeó.</p>
+<img src="https://d11cuk1a0j5b57.cloudfront.net/blog/wp-content/uploads/2015/03/07160544/chicos-1800x1200-2.jpg" />
+<h4 class="rubric" id="id1">Actividades</h4>
+<ul class="simple">
+<li><p class="sd-card-text">Construir y mantener un equipo efectivo.</p></li>
+<li><p class="sd-card-text">Motivar a los miembros del equipo para que trabajen de manera entusiasta y dedicada en el proyecto.</p></li>
+<li><p class="sd-card-text">Resolver los conflictos del grupo.</p></li>
+<li><p class="sd-card-text">Mantener informado al instructor sobre el progreso en el proyecto.</p></li>
+<li><p class="sd-card-text">Ser un facilitador efectivo en las reuniones de grupo del proyecto.</p></li>
+</ul>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Administrador de desarrollo<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Liderar y guiar el grupo en la definición, diseño, desarrollo y pruebas del producto.</p>
+<img src="https://mediavueltadigital.com/wp-content/uploads/2020/07/concepto-de-administrador-1-1.png" />
+<h4 class="rubric" id="id2">Actividades</h4>
+<ul class="simple">
+<li><p class="sd-card-text">Producir un producto de calidad superior</p></li>
+<li><p class="sd-card-text">Usar totalmente las capacidades y habilidades de los miembros del grupo</p></li>
+</ul>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Administrador de planeación<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Dar soporte y guía al grupo en la tareas de planeación y seguimiento del proyecto.</p>
+<img src="https://concepto.de/wp-content/uploads/2019/07/planeacion-en-administracion-e1562784145679.jpg" />
+<h4 class="rubric" id="id3">Actividades</h4>
+<ul class="simple">
+<li><p class="sd-card-text">Producir un plan completo, preciso y exacto del plan del equipo y de cada uno de sus miembros.</p></li>
+<li><p class="sd-card-text">Reportar con exactitud el estado del proyecto cada semana.</p></li>
+</ul>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Administrador de calidad<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Encargado de dar soporte, definir las necesidades del proceso, hacer el plan de calidad y hacer seguimiento al proceso y a la calidad del producto.</p>
+<img src="https://humanidades.com/wp-content/uploads/2017/05/calidad-total-1-e1569807634807.jpg" />
+<h4 class="rubric" id="id4">Actividades</h4>
+<ul class="simple">
+<li><p class="sd-card-text">Todos los miembros del equipo reportan adecuada y exactamente la información del proceso.</p></li>
+<li><p class="sd-card-text">El equipo sigue fielmente el proceso y obtiene un producto de calidad.</p></li>
+<li><p class="sd-card-text">Todas las inspecciones del equipo son adecuadamente moderadas y reportadas.</p></li>
+<li><p class="sd-card-text">Todas las reuniones del equipo son adecuadamente reportadas y los reportes se guardan en el sitio del proyecto.</p></li>
+</ul>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Administrador de soporte<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Dar soporte al grupo en la determinación, obtención y administración de las herramientas necesarias para desarrollar el producto.</p>
+<img src="https://tecnosoluciones.com/wp-content/uploads/2023/02/soporte-remoto.png" />
+<h4 class="rubric" id="id5">Actividades</h4>
+<ul class="simple">
+<li><p class="sd-card-text">El grupo tiene las herramientas y los métodos adecuados para realizar su trabajo.</p></li>
+<li><p class="sd-card-text">Ningún cambio no autorizado es realizado sobre productos “congelados”.</p></li>
+<li><p class="sd-card-text">Los riesgos y los problemas son registrados en el sistema de rastreo de riesgos y reportados cada semana.</p></li>
+<li><p class="sd-card-text">El grupo define sus objetivos de reutilización para el ciclo de desarrollo.</p></li>
+</ul>
+</div>
+</details></section>
+</section>
+</section>
+<hr class="docutils" />
+<section id="actividad-en-grupo">
+<h2>Actividad en grupo!!<a class="headerlink" href="#actividad-en-grupo" title="Link to this heading">#</a></h2>
+<section id="vamos-a-crear-nuestros-equipos">
+<h3>Vamos a crear nuestros equipos<a class="headerlink" href="#vamos-a-crear-nuestros-equipos" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Nombre del grupo</p></li>
+<li><p>Integrantes</p></li>
+<li><p>Rol de cada integrante</p></li>
+</ul>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference external" href="https://drive.google.com/file/d/1vK5auoK_0RsDcDgozqnOz962yGS0HNb1/view?usp=share_link">Guia de Bolsillo</a></p>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="proceso-de-desarrollo-de-software-tsp">
+<h2>Proceso de desarrollo de software: TSP<a class="headerlink" href="#proceso-de-desarrollo-de-software-tsp" title="Link to this heading">#</a></h2>
+<p>Tiene un marco de trabajo definido basado en <strong>procesos</strong></p>
+<img src="../../_static/images/TSP_intro.png" />
+<hr class="docutils" />
+<p><strong>Está diseñado para grupos de personas que:</strong></p>
+<ul class="simple">
+<li><p>Trabajan juntos para lograr un objetivo</p></li>
+<li><p>Planean su trabajo</p></li>
+<li><p>Manejan y hacen seguimiento a los proyectos para llevarlos a su culminación exitosa</p></li>
+<li><p>Aunque tienen roles específicos, se dan soporte unos a otros</p></li>
+<li><p>Elaboran productos de calidad</p></li>
+</ul>
+<hr class="docutils" />
+<p><strong>Cada Persona es responsable de:</strong></p>
+<ul class="simple">
+<li><p>Planear su trabajo y registrar sus datos</p></li>
+<li><p>Realizar sus tareas con alta calidad y realizar revisiones para detectar y eliminar defectos</p></li>
+</ul>
+<p><strong>El equipo es responsable de:</strong></p>
+<ul class="simple">
+<li><p>Planear su trabajo y agrupar los datos de sus miembros</p></li>
+<li><p>Realizar inspecciones de los productos para detectar y eliminar defectos</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="estructura-del-tsp">
+<h2>Estructura del TSP<a class="headerlink" href="#estructura-del-tsp" title="Link to this heading">#</a></h2>
+<img src="../../_static/images/tsp_estruct.png"/>
+<hr class="docutils" />
+<section id="desarrollo-en-ciclos">
+<h3>Desarrollo en ciclos<a class="headerlink" href="#desarrollo-en-ciclos" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Cada ciclo debe producir un entregable que funciona y es parte del producto final.</p></li>
+<li><p>Cada ciclo debe ser lo suficientemente pequeño como para ser fácilmente desarrollado y probado en el tiempo disponible.</p></li>
+<li><p>Descomponer el trabajo en módulos, paquetes, versiones … etc</p></li>
+<li><p>Después del primer ciclo se volverá a planear.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="fases-de-tsp">
+<h3>Fases de TSP<a class="headerlink" href="#fases-de-tsp" title="Link to this heading">#</a></h3>
+<p>TSP recomienda las siguientes fases, pero se pueden personalizar</p>
+<img src="../../_static/images/fasesTSP.png">
+</section>
+<hr class="docutils" />
+<section id="lanzamiento-de-procesos-tsp">
+<h3>Lanzamiento de procesos TSP<a class="headerlink" href="#lanzamiento-de-procesos-tsp" title="Link to this heading">#</a></h3>
+<p><strong>Se hace:</strong></p>
+<ul class="simple">
+<li><p>Al comienzo del proyecto</p></li>
+<li><p>Antes de comenzar cada ciclo o cuando se requieren cambios sustanciales al plan</p></li>
+</ul>
+<p><strong>El equipo produce los planes para guiar su trabajo</strong></p>
+<p><strong>Establecer un entendimiento común en:</strong></p>
+<ul class="simple">
+<li><p>Objetivos del proyecto</p></li>
+<li><p>Objetivos del equipo y los miembros</p></li>
+<li><p>El trabajo que será realizado</p></li>
+<li><p>El proceso que el equipo utilizará</p></li>
+<li><p>La forma de comunicación del equipo</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="ciclo-de-vida-de-tsp-en-la-practica">
+<h3>Ciclo de vida de TSP en la práctica<a class="headerlink" href="#ciclo-de-vida-de-tsp-en-la-practica" title="Link to this heading">#</a></h3>
+<img src="../../_static/images/ciclo_vida_TSP_pract.png">
+</section>
+</section>
+<hr class="docutils" />
+<section id="la-estrategia-de-desarrollo">
+<h2>La estrategia de desarrollo<a class="headerlink" href="#la-estrategia-de-desarrollo" title="Link to this heading">#</a></h2>
+<p>La estrategia consiste en discutir las diferentes formas de construir el producto y seleccionar una de ellas</p>
+<p>Determinar – de manera preliminar – los ciclos  requeridos</p>
+<img src="../../_static/images/model_CU.png">
+</section>
+<hr class="docutils" />
+<section id="elaboracion-de-los-planes">
+<h2>Elaboración de los planes<a class="headerlink" href="#elaboracion-de-los-planes" title="Link to this heading">#</a></h2>
+<p>Después de definir la estrategia, se elaboran planes detallados <strong>solo para el ciclo que comenzará</strong></p>
+<img src="https://blog.legis.com.co/hubfs/Plan-de-formaci%C3%B3n-profesional.jpg"/>
+</section>
+<hr class="docutils" />
+<section id="planeacion-de-tareas">
+<h2>Planeación de tareas<a class="headerlink" href="#planeacion-de-tareas" title="Link to this heading">#</a></h2>
+<section id="estimar-recursos">
+<h3>Estimar recursos<a class="headerlink" href="#estimar-recursos" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Horas del equipo de trabajo (sumar las de cada integrante)</p></li>
+<li><p>Establecer una lista de tareas para el ciclo, de acuerdo con la estrategia y las fases definidas</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Tener en cuenta</strong></p>
+<ul class="simple">
+<li><p>Procesos de ingeniería (diseño, desarrollo, pruebas,…)</p></li>
+<li><p>Procesos de soporte (integrar los resultados, configurar herramientas, …)</p></li>
+</ul>
+</div>
+</section>
+<hr class="docutils" />
+<section id="id6">
+<h3>Planeación de tareas<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Definir adecuadamente la granularidad de cada tarea</p></li>
+<li><p>Tareas más pequeñas facilitan la estimación</p></li>
+<li><p>Cada tarea debe poder realizarse en un día</p></li>
+<li><p>Se pueden tener tareas compartidas, pero lo ideal es que cada tarea tenga un solo responsable</p></li>
+</ul>
+<img src="../../_static/images/planeacionTable.png" />
+<hr class="docutils" />
+<section id="construccion-de-planes-individuales">
+<h4>Construcción de planes individuales<a class="headerlink" href="#construccion-de-planes-individuales" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Asignar tareas a cada individuo</p></li>
+<li><p>Balancear la carga de tabajo con todos los miembros del equipo</p></li>
+</ul>
+<img src="../../_static/images/plan_indiv.png" />
+</section>
+</section>
+<hr class="docutils" />
+<section id="planeacion-de-la-calidad">
+<h3>Planeación de la calidad<a class="headerlink" href="#planeacion-de-la-calidad" title="Link to this heading">#</a></h3>
+<p>Calidad del proceso de desarrollo</p>
+<ul class="simple">
+<li><p>Cantidad de defectos que se insertarán (o inyectarán) en los productos</p></li>
+<li><p>Cantidad de defectos que se eliminarán en cada actividad de calidad</p></li>
+</ul>
+<img src="../../_static/images/planeacionCalidad.png">
+<hr class="docutils" />
+<section id="actividades-de-calidad">
+<h4>Actividades de calidad<a class="headerlink" href="#actividades-de-calidad" title="Link to this heading">#</a></h4>
+<img src="../../_static/images/activCalidad.png">
+</section>
+<hr class="docutils" />
+<section id="produccion-de-un-plan-de-calidad">
+<h4>Producción de un plan de calidad<a class="headerlink" href="#produccion-de-un-plan-de-calidad" title="Link to this heading">#</a></h4>
+<img src="../../_static/images/plan_calidad.png">
+<hr class="docutils" />
+<section id="ejemplo-de-un-plan-de-calidad">
+<h5>Ejemplo de un plan de calidad<a class="headerlink" href="#ejemplo-de-un-plan-de-calidad" title="Link to this heading">#</a></h5>
+<img src="../../_static/images/ejemploPCalidad.png">
+<ul class="simple">
+<li><p>En revisiones e inspecciones tener como meta eliminar más del 50 % de los defectos</p></li>
+<li><p>En pruebas tener como meta eliminar el 50 % de los defectos</p></li>
+</ul>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section id="los-planes-se-deben-relacionar">
+<h3>Los planes se deben relacionar<a class="headerlink" href="#los-planes-se-deben-relacionar" title="Link to this heading">#</a></h3>
+<img src="../../_static/images/planesRelac.png">
+</section>
+<hr class="docutils" />
+<section id="estrategias-de-comunicacion">
+<h3>Estrategias de comunicación<a class="headerlink" href="#estrategias-de-comunicacion" title="Link to this heading">#</a></h3>
+<p>Son claves porque permiten dar seguimiento al proceso, planificar soluciones y levantar la mano a tiempo.</p>
+<img src="https://web.soluprime.io/blog/content/images/2021/01/27-eNER.png">
+<p><strong>Definir:</strong></p>
+<ul class="simple">
+<li><p>Horario fijo para una reunión semanal de seguimiento</p></li>
+<li><p>Horario tentativo para reuniones requeridas durante el transcurso del ciclo</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="definir-las-reglas">
+<h3>Definir las reglas<a class="headerlink" href="#definir-las-reglas" title="Link to this heading">#</a></h3>
+<p><strong>Honestidad</strong></p>
+<ul class="simple">
+<li><p>Avances, mejoras encontradas</p></li>
+<li><p>Retrasos, dificultades</p></li>
+<li><p><strong>¡Pedir ayuda a tiempo!</strong></p></li>
+</ul>
+<p><strong>Basarse en los datos</strong></p>
+<ul class="simple">
+<li><p>No atacar a las personas</p></li>
+</ul>
+<p><strong>No se pueden enviar documentos por correo, mensajería o redes sociales, se debe usar el repositorio</strong></p>
+<ul class="simple">
+<li><p>Los otros mecanismos son para avisar, preguntas rápidas, coordinar reuniones, etc.</p></li>
+</ul>
+<p><strong>Tiempo para responder un mensaje</strong></p>
+<p><strong>Cadena de información</strong></p>
+<ul class="simple">
+<li><p>Compañeros, Líder, Administrativo (o profesor)</p></li>
+</ul>
+</section>
+<section id="otras-formas-de-comunicacion">
+<h3>Otras formas de comunicación<a class="headerlink" href="#otras-formas-de-comunicacion" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Teléfonos y correos</p></li>
+<li><p>Grupos de mensajería instantánea, redes sociales</p></li>
+<li><p>Tener un repositorio compartido</p>
+<ul>
+<li><p>Documentos</p></li>
+<li><p>Diagramas</p></li>
+<li><p>Código</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="apliquemos-lo-aprendido">
+<h2>Apliquemos lo aprendido!! 🧠<a class="headerlink" href="#apliquemos-lo-aprendido" title="Link to this heading">#</a></h2>
+<p>Formato de excel con las tablas para el desarrollo de las asignaciones de roles y elaboración de los planes para el proyecto.</p>
+<div class="sd-sphinx-override sd-cards-carousel sd-card-cols-1 docutils">
+<div class="sd-card sd-sphinx-override sd-m-3 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-header bg-light text-center docutils">
+<p class="sd-card-text"><strong>💬 Asignación de roles</strong></p>
+</div>
+<div class="sd-card-body text-center docutils">
+<a class="reference internal image-reference" href="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Google_Sheets_2020_Logo.svg/436px-Google_Sheets_2020_Logo.svg.png"><img alt="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Google_Sheets_2020_Logo.svg/436px-Google_Sheets_2020_Logo.svg.png" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Google_Sheets_2020_Logo.svg/436px-Google_Sheets_2020_Logo.svg.png" style="height: 100px;" /></a>
+<p class="sd-card-text">Trabajo en equipo</p>
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text">Explore this book <span class="fas fa-arrow-right"></span></p>
+</div>
+<a class="sd-stretched-link reference external" href="https://docs.google.com/spreadsheets/d/1UCDF83NItI46OjkJ8gtkrgCgZxx-aT-4wgWA0mIMkm4/edit?usp=sharing"></a></div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Unidades/Unidad_1"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#por-que-trabajar-en-equipo">¿Por qué trabajar en equipo?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#roles-del-equipo">Roles del equipo</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#coach">Coach:</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#actividades">Actividades</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#actividad-en-grupo">Actividad en grupo!!</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vamos-a-crear-nuestros-equipos">Vamos a crear nuestros equipos</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proceso-de-desarrollo-de-software-tsp">Proceso de desarrollo de software: TSP</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estructura-del-tsp">Estructura del TSP</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#desarrollo-en-ciclos">Desarrollo en ciclos</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fases-de-tsp">Fases de TSP</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lanzamiento-de-procesos-tsp">Lanzamiento de procesos TSP</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ciclo-de-vida-de-tsp-en-la-practica">Ciclo de vida de TSP en la práctica</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#la-estrategia-de-desarrollo">La estrategia de desarrollo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elaboracion-de-los-planes">Elaboración de los planes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#planeacion-de-tareas">Planeación de tareas</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estimar-recursos">Estimar recursos</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Planeación de tareas</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#construccion-de-planes-individuales">Construcción de planes individuales</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#planeacion-de-la-calidad">Planeación de la calidad</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#actividades-de-calidad">Actividades de calidad</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#produccion-de-un-plan-de-calidad">Producción de un plan de calidad</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplo-de-un-plan-de-calidad">Ejemplo de un plan de calidad</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#los-planes-se-deben-relacionar">Los planes se deben relacionar</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estrategias-de-comunicacion">Estrategias de comunicación</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definir-las-reglas">Definir las reglas</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#otras-formas-de-comunicacion">Otras formas de comunicación</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#apliquemos-lo-aprendido">Apliquemos lo aprendido!! 🧠</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Reinel Tabares, Johan Piña, Brayan Arteaga
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
