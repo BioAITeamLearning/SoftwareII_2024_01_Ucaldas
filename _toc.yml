@@ -1,0 +1,60 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+chapters:
+- file: Unidad1
+#  sections:
+#    - file: "Unidades/Unidad_1/clase1_2"
+#    - file: "Unidades/Unidad_1/Evaluemos_Unidad1"
+    
+#- file: Unidad2
+#  sections:
+#    - file: "Unidades/Unidad_2/repaso_python_java"
+#    - file: "Unidades/Unidad_2/Clase1_Semana2_TiposDeDatosCondicionalesCiclosColeccionesFunciones"
+#    - file: "Unidades/Unidad_2/Clase2_Semana2_EstructurasParaSoftwareJava"
+#    - file: "Unidades/Unidad_2/Clase2_Semana2_EstructurasParaSoftwarePython"
+#    - file: "Unidades/Unidad_2/Clase2_Semana2_Pandas_10_08_2023"
+#    - file: "Unidades/Unidad_2/Clase2_Semana2_Manejo_ficheros"
+#    
+#- file: Unidad3
+#  sections:
+#    - file: "Unidades/Unidad_3/Tipos_procesos_Software"
+#    - file: "Unidades/Unidad_3/Repaso_DB_conn_IntroORM"
+#    - file: "Unidades/Unidad_3/EvaluemosLoAprendido"
+#- file: Unidad4
+#  sections:
+#    - file: "Unidades/Unidad_4/Niveles_RF_RNF"
+#    - file: "Unidades/Unidad_4/EvaluemosLoAprendido"
+#   
+#- file: Unidad5
+#  sections:
+#    - file: "Unidades/Unidad_5/EvaluemosLoAprendido"
+#    - file: "Unidades/Unidad_5/Elicitacion_requisitos_casosEstudio"
+#    - file: "Unidades/Unidad_5/SesionInicial_BackendFastAPI_v1"
+    
+#- file: Unidad6
+#  sections:
+#    - file: "Unidades/Unidad_6/casosUso"
+#- file: Unidad7
+#  sections:
+#    - file: "Unidades/Unidad_7/EvaluamosLoAprendido"
+
+#- file: Unidad8
+#  sections:
+#    - file: "Unidades/Unidad_8/mockups"
+#    - file: "Unidades/Unidad_8/EvaluemosLoAprendido"
+#    - file: "Unidades/Unidad_8/end_to_end_process"
+#- file: Unidad9
+#- file: Unidad10
+#  sections:
+#    - file: "Unidades/Unidad_10/PatronesArquitectonicos"
+#    - file: "Unidades/Unidad_10/DiagramasDePaquetesDespliegue"
+#    - file: "Unidades/Unidad_10/GithubPro_howToObtain"
+#    - file: "Unidades/Unidad_10/EvaluemosLoAprendido"
+#- file: Unidad11
+#- file: Unidad12
+#  sections:
+#    - file: "Unidades/Unidad_12/testing"
+#- file: Unidad13

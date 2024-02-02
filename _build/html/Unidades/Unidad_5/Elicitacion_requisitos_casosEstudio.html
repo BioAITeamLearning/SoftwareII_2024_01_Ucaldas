@@ -1,0 +1,566 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Elicitación de requerimientos &#8212; Desarrollo de Software II 2024 - 01</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=afe5de03"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Unidades/Unidad_5/Elicitacion_requisitos_casosEstudio';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="https://avatars.githubusercontent.com/u/142033488?s=200&v=4" class="logo__image only-light" alt="Desarrollo de Software II 2024 - 01 - Home"/>
+    <script>document.write(`<img src="https://avatars.githubusercontent.com/u/142033488?s=200&v=4" class="logo__image only-dark" alt="Desarrollo de Software II 2024 - 01 - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Desarrollo de Software II
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../Unidad1.html">Unidad 1: Desarrollo en Equipo</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/BioAITeamLearning/SoftwareII_2024_01_Ucaldas" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/BioAITeamLearning/SoftwareII_2024_01_Ucaldas/issues/new?title=Issue%20on%20page%20%2FUnidades/Unidad_5/Elicitacion_requisitos_casosEstudio.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/Unidades/Unidad_5/Elicitacion_requisitos_casosEstudio.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Elicitación de requerimientos</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="elicitacion-de-requerimientos">
+<h1>Elicitación de requerimientos<a class="headerlink" href="#elicitacion-de-requerimientos" title="Link to this heading">#</a></h1>
+<p>La elicitación de requerimientos es el proceso de identificar, recopilar, documentar y validar los requerimientos de un sistema, producto o proyecto. Estos requerimientos son las características, funciones y restricciones que deben cumplirse para satisfacer las necesidades y expectativas de los stakeholders (partes interesadas). Aquí se describen los pasos clave para llevar a cabo este proceso:</p>
+<ol class="arabic simple">
+<li><p><strong>Identificar stakeholders:</strong> Identificar a las personas que tienen un interés en el sistema, producto o proyecto. Estas personas pueden ser usuarios, clientes, patrocinadores, gerentes, desarrolladores, etc. Es importante identificar a todos los stakeholders, ya que cada uno puede tener diferentes necesidades y expectativas.</p></li>
+<li><p><strong>Entender el contexto:</strong> Comprender el contexto del sistema, producto o proyecto. Esto incluye comprender el negocio, el entorno operativo, los objetivos, las restricciones, las oportunidades y los problemas.</p></li>
+<li><p><strong>Planificar la elicitación:</strong> Planificar la elicitación de requerimientos. Esto incluye definir el alcance, los objetivos, los métodos, los recursos y el cronograma de la elicitación.</p></li>
+<li><p><strong>Elegir técnicas:</strong> Elegir las técnicas de elicitación de requerimientos que se utilizarán. Las técnicas de elicitación incluyen entrevistas, cuestionarios, talleres, observación, prototipos, casos de uso, historias de usuario, etc.</p>
+<ul class="simple">
+<li><p><strong>Realización de Entrevistas:</strong> Las entrevistas son una técnica clave. Conversa con los stakeholders para comprender sus necesidades, expectativas y deseos. Prepara preguntas abiertas y cerradas para obtener información detallada.</p></li>
+<li><p><strong>Encuestas y cuestionarios:</strong> Las encuestas son una técnica útil para recopilar información de un gran número de stakeholders. Las encuestas pueden ser en línea o en papel. Las preguntas pueden ser abiertas o cerradas.</p></li>
+<li><p><strong>Taller de requerimientos</strong>: Los talleres son reuniones colaborativas donde los stakeholders trabajan juntos para definir y priorizar los requerimientos. Pueden ser especialmente útiles para resolver conflictos y alinear expectativas.</p></li>
+<li><p><strong>Observación:</strong> Observa a los usuarios mientras realizan sus tareas. Esto puede ayudarte a comprender mejor sus necesidades y expectativas. También puede ayudarte a identificar problemas y oportunidades.</p></li>
+<li><p><strong>Prototipado:</strong> La creación de prototipos o maquetas del sistema puede ayudar a los stakeholders a visualizar mejor cómo será el producto final y aclarar los requerimientos.</p></li>
+<li><p><strong>Documentación de Requerimientos:</strong> Registra los requerimientos de manera clara y precisa. Utiliza formatos adecuados, como especificaciones funcionales.</p></li>
+</ul>
+</li>
+<li><p><strong>Validación de requerimientos:</strong> Verifica que los requerimientos recopilados sean consistentes, completos, relevantes y alcanzables. Esto implica una revisión exhaustiva con los stakeholders y posiblemente la realización de pruebas de validación.</p></li>
+<li><p><strong>Gestión de Cambios:</strong> Establece un proceso para gestionar cambios en los requerimientos a lo largo del proyecto. Los cambios deben ser documentados, evaluados y aprobados por las partes interesadas.</p></li>
+</ol>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Vamos a realizar una elicitación de requerimientos!</p>
+<p>En grupos van a elegir una de las aplicaciones que se muestra debajo, vamos a realizar para ellas el proceso de análisis de requerimientos funcionales y no funcionales.</p>
+<p>Para el procesos de elicitación debe realizar el entendimiento de los stakeholders, la lógica y los objetivos del negocio. Estos deben quedar en el entregable.</p>
+<p>Omita la planeación de la elicitación en el entregable.</p>
+<p>las técnicas a utilizar deben ser:</p>
+<ul class="simple">
+<li><p>Encuesta/ cuestionario… dejarlo planteado como si se fuese a aplicar con los stakeholders.</p></li>
+<li><p>Observación… realizar una busqueda en internet de la aplicación y realizar una observación de la misma.</p></li>
+<li><p>Documentación de requerimientos… realizar un documento con los requerimientos funcionales y no funcionales de la aplicación.</p></li>
+<li><p>Realizar una validación con el equipo de desarrollo de los requerimientos funcionales y no funcionales (refinar los definidos en el paso anterior).</p></li>
+</ul>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-0">
+Instagram</label><div class="sd-tab-content docutils">
+<img src="https://static.vecteezy.com/system/resources/previews/024/170/870/original/instagram-icon-logo-symbol-free-png.png"/>
+<p><strong>Ejemplo de descripción de la aplicación</strong>
+Instagram, la popular plataforma de redes sociales, se ha convertido en un fenómeno global que ha redefinido la manera en que las personas se conectan, comparten y se expresan en línea. Desde su lanzamiento en octubre de 2010, esta aplicación móvil ha ganado una base de usuarios masiva y una influencia significativa en la cultura digital contemporánea. Con más de una década de existencia, Instagram ha evolucionado más allá de ser simplemente una plataforma para compartir imágenes y videos, convirtiéndose en una herramienta poderosa para la creación de contenido, el marketing y la construcción de comunidades en línea.</p>
+<p>Instagram permite a los usuarios crear perfiles personalizados, compartir fotos y videos, seguir a otros usuarios, interactuar a través de comentarios y mensajes directos, y descubrir contenido relevante mediante el uso de hashtags y la función de exploración. La aplicación se ha convertido en un escaparate visual diverso, que abarca desde la fotografía artística hasta el contenido influencer y el marketing de marcas. A lo largo de los años, Instagram ha introducido numerosas características nuevas, incluyendo Stories (Historias), IGTV, y herramientas de compras en línea, expandiendo su utilidad y atrayendo a una amplia variedad de usuarios.</p>
+<p>En la actualidad, Instagram cuenta con una impresionante cantidad de usuarios recurrentes en todo el mundo, lo que la convierte en una de las redes sociales más populares. Con millones de personas que acceden a la plataforma a diario para compartir momentos de su vida, seguir a sus celebridades favoritas o explorar intereses específicos, Instagram ha demostrado su capacidad para adaptarse a las cambiantes tendencias digitales y mantenerse relevante en el panorama de las redes sociales.</p>
+<p>En este documento de elicitar requerimientos, exploraremos en profundidad las características clave de Instagram, las necesidades de sus usuarios y los posibles desarrollos futuros para mejorar la experiencia de los usuarios en esta plataforma dinámica y en constante evolución.</p>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-1">
+Airbnb</label><div class="sd-tab-content docutils">
+<img src="https://brandemia.org/sites/default/files/sites/default/files/bnb_billboard_01-2000x1125.jpg"/>
+<p><strong>Ejemplo de descripción de la aplicación</strong>
+En el mundo de la hospitalidad y los viajes, Airbnb se ha convertido en una plataforma icónica que ha transformado la forma en que las personas buscan, reservan y comparten alojamiento en todo el mundo. Fundada en 2008, Airbnb se ha convertido en un actor líder en la economía compartida, conectando a millones de viajeros con anfitriones locales en más de 220 países y regiones. Esta aplicación, que es utilizada por una amplia variedad de usuarios, ofrece una experiencia única de viaje al permitir a los usuarios encontrar alojamientos únicos, vivir como un local y crear recuerdos memorables.</p>
+<p>Airbnb no solo ha revolucionado la forma en que las personas experimentan los viajes, sino que también ha desafiado las convenciones tradicionales de la industria hotelera. La plataforma permite a las personas convertirse en anfitriones y alquilar sus propios espacios, ya sea una habitación adicional en su hogar o una propiedad completa, lo que brinda oportunidades económicas y experiencias auténticas a los viajeros y a las comunidades locales por igual.</p>
+<p>En este documento de elicitation, exploraremos en detalle la aplicación Airbnb, sus funcionalidades clave, y el perfil de sus usuarios recurrentes. Profundizaremos en cómo esta plataforma ha logrado cambiar la dinámica del alojamiento y qué aspectos son particularmente atractivos para sus usuarios.</p>
+</div>
+<input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-2">
+Jira</label><div class="sd-tab-content docutils">
+<img src="https://1000marcas.net/wp-content/uploads/2021/07/Jira-Software-logo.png"/>
+<p><strong>Ejemplo de descripción de la aplicación</strong>
+Jira, una de las principales herramientas de gestión de proyectos y seguimiento de problemas en el mundo del desarrollo de software, se ha convertido en una pieza fundamental para organizaciones de todos los tamaños. Esta aplicación ofrece una solución versátil y altamente configurable que permite a los equipos planificar, rastrear y gestionar proyectos y tareas de manera efectiva.</p>
+<p>Jira, desarrollada por Atlassian, es una plataforma de gestión de proyectos y seguimiento de problemas que se utiliza en una variedad de industrias y contextos empresariales. Su versatilidad y adaptabilidad la han convertido en una herramienta esencial para empresas que buscan aumentar su eficiencia en la gestión de proyectos y el desarrollo de software.</p>
+<p>La aplicación Jira permite a los usuarios crear y asignar tareas, realizar un seguimiento del progreso, gestionar cronogramas, registrar errores y colaborar en tiempo real. Además, ofrece una serie de características y funcionalidades personalizables que se pueden adaptar a las necesidades específicas de cada equipo y proyecto.</p>
+<p>Jira ha ganado una base de usuarios sustancial y leal en todo el mundo. A medida que su popularidad ha crecido, la aplicación se ha convertido en una opción de referencia para empresas de desarrollo de software, equipos de gestión de proyectos, equipos de TI y muchas otras disciplinas empresariales.</p>
+<p>En la actualidad, millones de usuarios recurrentes confían en Jira para gestionar proyectos y tareas de manera eficiente, lo que lo convierte en una herramienta líder en su categoría. Este documento tiene como objetivo realizar un análisis en profundidad de las necesidades y requerimientos de esta diversa comunidad de usuarios, con el fin de optimizar aún más la experiencia y la funcionalidad de Jira.</p>
+</div>
+<input id="sd-tab-item-3" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-3">
+Platzi</label><div class="sd-tab-content docutils">
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/32/Platzi.jpg"/>
+<p><strong>Ejemplo de descripción de la aplicación</strong>
+En la era digital actual, el aprendizaje en línea se ha convertido en una parte esencial de la educación y el desarrollo profesional. En este contexto, Platzi emerge como una plataforma líder que ha revolucionado la forma en que las personas acceden al conocimiento y adquieren nuevas habilidades. Platzi, fundada en 2014, es una plataforma de aprendizaje en línea que ha ganado reconocimiento y popularidad mundial gracias a su enfoque único y efectivo para la educación en línea.</p>
+<p>Platzi tiene como objetivo principal proporcionar un acceso accesible y efectivo a una amplia gama de cursos y recursos de aprendizaje en línea. Desde tecnología y desarrollo de software hasta negocios y diseño, la plataforma ofrece una diversidad de contenidos de alta calidad que abarcan diversas disciplinas. Estos cursos no solo están diseñados para principiantes, sino que también ofrecen niveles intermedios y avanzados, lo que permite a los usuarios encontrar contenido adecuado a su nivel de experiencia y necesidades de desarrollo.</p>
+<p>Desde su inicio, Platzi ha experimentado un crecimiento constante en su base de usuarios. Actualmente, la plataforma cuenta con una comunidad activa de  3 millones de estudiantes recurrentes en más de 140 países, quienes confían en Platzi como su fuente principal de aprendizaje en línea. Esta cifra refleja el impacto positivo que Platzi ha tenido en la educación y el desarrollo profesional de personas en todo el mundo.</p>
+<p>A lo largo de este documento, exploraremos en detalle los aspectos clave de la aplicación Platzi, incluyendo sus características distintivas, su modelo de negocio y los desafíos y oportunidades que enfrenta en el competitivo mundo del aprendizaje en línea.</p>
+</div>
+<input id="sd-tab-item-4" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-4">
+Uber</label><div class="sd-tab-content docutils">
+<img src="https://logos-world.net/wp-content/uploads/2020/05/Uber-Emblem.png"/>
+<p><strong>Ejemplo de descripción de la aplicación</strong>
+Uber es una innovadora aplicación móvil que ha transformado la forma en que las personas se desplazan en las ciudades de todo el mundo. Fundada en 2009, esta plataforma tecnológica ha revolucionado la industria del transporte al conectar de manera eficiente a usuarios con conductores independientes, brindando así una alternativa segura y conveniente a los métodos de transporte tradicionales.</p>
+<p>Uber se ha convertido en una herramienta esencial para millones de personas en todo el mundo que buscan una solución de transporte confiable y accesible. Su amplia gama de servicios, que incluye viajes en automóvil privado, bicicletas eléctricas, patinetes y hasta helicópteros en algunas ciudades, satisface diversas necesidades de movilidad, desde viajes cortos en la ciudad hasta traslados al aeropuerto.</p>
+<p>En la actualidad, Uber cuenta con una base de usuarios recurrentes que se ha expandido exponencialmente a lo largo de los años. Con millones de personas que utilizan la aplicación diariamente en más de 900 áreas metropolitanas en todo el mundo, Uber se ha convertido en una parte fundamental de la vida de las personas, ofreciendo una forma rápida y confiable de moverse por la ciudad.</p>
+<p>Este documento de elicación de requerimientos tiene como objetivo comprender las necesidades de los usuarios y las expectativas de los conductores en relación con la aplicación Uber. Analizaremos las características existentes de la aplicación, exploraremos las posibles mejoras y nuevas funcionalidades, y nos centraremos en mantener y mejorar la experiencia de los usuarios recurrentes, que son la base de la comunidad de Uber.</p>
+<p>A lo largo de este proceso de elicación, exploraremos los desafíos y oportunidades para seguir mejorando la aplicación Uber y asegurarnos de que siga siendo líder en la industria del transporte compartido.</p>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Debes realizar una página web estática con el contenido de la elicitación de requerimientos, esta debe ser entregada en un repositorio de github y debe estar publicada en github pages.</p>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Unidades/Unidad_5"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Reinel Tabares, Johan Piña, Brayan Arteaga
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
