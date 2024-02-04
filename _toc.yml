@@ -5,8 +5,8 @@ format: jb-book
 root: intro
 chapters:
 - file: Unidad1
-#  sections:
-#    - file: "Unidades/Unidad_1/clase1_2"
+  sections:
+    - file: "Unidades/Unidad_1/clase1_2"
 #    - file: "Unidades/Unidad_1/Evaluemos_Unidad1"
     
 #- file: Unidad2
