@@ -361,7 +361,7 @@ Formato de excel con las tablas para el desarrollo de las asignaciones de roles 
 :margin: 3
 :class-body: text-center
 :class-header: bg-light text-center
-:link: https://docs.google.com/spreadsheets/d/1UCDF83NItI46OjkJ8gtkrgCgZxx-aT-4wgWA0mIMkm4/edit?usp=sharing
+:link: https://docs.google.com/spreadsheets/d/1aW5BjGIgQpBPo5t_axjjBaZTKgKH9sFn7KsOSgReYfQ/edit?usp=sharing
 **💬 Asignación de roles**
 ^^^
 ```{image} https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Google_Sheets_2020_Logo.svg/436px-Google_Sheets_2020_Logo.svg.png
