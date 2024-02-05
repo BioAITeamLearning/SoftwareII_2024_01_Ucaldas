@@ -276,7 +276,7 @@ Computación en la Nube
 ---
 
 ## Bibliografía
-Estas son algunas de las referencias usadas para este curso, vuelve pronto para encontrar más contenido.
+Estas son algunas de las referencias usadas para este curso.
 
 ::::{card-carousel} 3
 
