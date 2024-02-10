@@ -124,9 +124,9 @@ Implementación de software
 :class-body: text-right
 :class-header: bg-light text-center
 ```{dropdown} Aspectos a afrontar
-* Grupos de personas en direcciones diferentes
-* Se logra con el tiempo, y los proyectos
-* Diferentes ideas de la solución
+* Grupos de personas puede ir en direcciones diferentes si no hay una guía clara.
+* Sincronizar el equipo requiere tiempo de trabajo conjunto y varios proyectos.
+* Cada integrante del equipo puede tener una idea diferente de como solucionar un mismo problema.
 ```
 :::
 
