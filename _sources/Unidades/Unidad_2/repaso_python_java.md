@@ -33,5 +33,5 @@ Google ha hecho lo más genial al proporcionar un servicio gratuito de servicio 
 
 ## Datos utilizados en la unidad
 ```{note}
-Recurso 📂 [Data](https://github.com/BioAITeamLearning/SoftwareII_2023_03_Ucaldas/tree/main/Unidades/Unidad_2/Data)
+Recurso 📂 [Data](https://github.com/BioAITeamLearning/SoftwareII_2024_01_Ucaldas/tree/main/Unidades/Unidad_2/Data)
 ```
