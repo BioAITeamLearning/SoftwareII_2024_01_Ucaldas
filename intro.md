@@ -333,7 +333,50 @@ Estas son algunas de las referencias usadas para este curso.
 ```
 :::
 
+:::{card}
+:margin: 3
+:class-body: text-center
+:class-header: bg-light text-center
+
+```{image} _static/images/bib6.png
+:height: 300
+```
+:::
+
+:::{card}
+:margin: 3
+:class-body: text-center
+:class-header: bg-light text-center
+
+```{image} _static/images/bib7.png
+:height: 300
+```
+:::
+
+:::{card}
+:margin: 3
+:class-body: text-center
+:class-header: bg-light text-center
+
+```{image} _static/images/bib8.png
+:height: 300
+```
+:::
+:::{card}
+:margin: 3
+:class-body: text-center
+:class-header: bg-light text-center
+
+```{image} _static/images/bib9.png
+:height: 300
+```
+:::
+
 ::::
+
+```{note}
+Algunos de los recursos están disponibles en el siguiente enlace: 📂 [Data](https://github.com/BioAITeamLearning/SoftwareII_2024_01_Ucaldas/tree/main/Unidades/Unidad_2/Data/bib/)
+```
 
 ---
 

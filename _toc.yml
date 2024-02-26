@@ -11,7 +11,7 @@ chapters:
     
 - file: Unidad2
   sections:
-    - file: "Unidades/Unidad_2/repaso_python_java"
+    #- file: "Unidades/Unidad_2/repaso_python_java"
     - file: "Unidades/Unidad_2/Clase1_Semana2_TiposDeDatosCondicionalesCiclosColeccionesFunciones"
     - file: "Unidades/Unidad_2/Clase2_Semana2_EstructurasParaSoftwareJava"
     - file: "Unidades/Unidad_2/Clase2_Semana2_EstructurasParaSoftwarePython"
@@ -19,9 +19,10 @@ chapters:
     - file: "Unidades/Unidad_2/Clase2_Semana2_Pandas_10_08_2023"
     - file: "Unidades/Unidad_2/Clase2_Semana2_Manejo_ficheros"
     
-#- file: Unidad3
-#  sections:
-#    - file: "Unidades/Unidad_3/Tipos_procesos_Software"
+- file: Unidad3
+  sections:
+    - file: "Unidades/Unidad_3/Tipos_procesos_Software"
+    - file: "Unidades/Unidad_3/Jira_gestion_procesos"
 #    - file: "Unidades/Unidad_3/Repaso_DB_conn_IntroORM"
 #    - file: "Unidades/Unidad_3/EvaluemosLoAprendido"
 #- file: Unidad4
