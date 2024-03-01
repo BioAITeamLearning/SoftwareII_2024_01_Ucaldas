@@ -23,7 +23,7 @@ chapters:
   sections:
     - file: "Unidades/Unidad_3/Tipos_procesos_Software"
     - file: "Unidades/Unidad_3/Jira_gestion_procesos"
-#    - file: "Unidades/Unidad_3/Repaso_DB_conn_IntroORM"
+    - file: "Unidades/Unidad_3/Repaso_DB_conn_IntroORM"
 #    - file: "Unidades/Unidad_3/EvaluemosLoAprendido"
 #- file: Unidad4
 #  sections:
