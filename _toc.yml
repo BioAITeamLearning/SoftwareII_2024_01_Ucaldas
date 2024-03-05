@@ -24,16 +24,18 @@ chapters:
     - file: "Unidades/Unidad_3/Tipos_procesos_Software"
     - file: "Unidades/Unidad_3/Jira_gestion_procesos"
     - file: "Unidades/Unidad_3/Repaso_DB_conn_IntroORM"
-#    - file: "Unidades/Unidad_3/EvaluemosLoAprendido"
-#- file: Unidad4
-#  sections:
-#    - file: "Unidades/Unidad_4/Niveles_RF_RNF"
-#    - file: "Unidades/Unidad_4/EvaluemosLoAprendido"
-#   
-#- file: Unidad5
-#  sections:
-#    - file: "Unidades/Unidad_5/EvaluemosLoAprendido"
-#    - file: "Unidades/Unidad_5/Elicitacion_requisitos_casosEstudio"
+    - file: "Unidades/Unidad_3/Solved_Repaso_DB_conn_IntroORM"
+    - file: "Unidades/Unidad_3/EvaluemosLoAprendido"
+    
+- file: Unidad4
+  sections:
+    - file: "Unidades/Unidad_4/Niveles_RF_RNF"
+    - file: "Unidades/Unidad_4/EvaluemosLoAprendido"
+   
+- file: Unidad5
+  sections:
+    - file: "Unidades/Unidad_5/EvaluemosLoAprendido"
+    - file: "Unidades/Unidad_5/Elicitacion_requisitos_casosEstudio"
 #    - file: "Unidades/Unidad_5/SesionInicial_BackendFastAPI_v1"
     
 #- file: Unidad6
