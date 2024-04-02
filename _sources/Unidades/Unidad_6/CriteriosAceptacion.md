@@ -83,7 +83,7 @@ Sólo deben de ser evaluados como cumple o no cumple, es decir no hay cabida par
 **No ambigüedad ➰**
 ^^^
 
-Deben de poder interpretados de la misma forma por cualquier persona que los lea.
+Deben de ser interpretados de la misma forma por cualquier persona que los lea.
 :::
 
 :::{grid-item-card}
