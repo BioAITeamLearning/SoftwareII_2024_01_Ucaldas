@@ -36,14 +36,16 @@ chapters:
   sections:
     - file: "Unidades/Unidad_5/EvaluemosLoAprendido"
     - file: "Unidades/Unidad_5/Elicitacion_requisitos_casosEstudio"
-#    - file: "Unidades/Unidad_5/SesionInicial_BackendFastAPI_v1"
+    - file: "Unidades/Unidad_5/SesionInicial_BackendFastAPI_v1"
     
-#- file: Unidad6
-#  sections:
-#    - file: "Unidades/Unidad_6/casosUso"
-#- file: Unidad7
-#  sections:
-#    - file: "Unidades/Unidad_7/EvaluamosLoAprendido"
+- file: Unidad6
+  sections:
+    - file: "Unidades/Unidad_6/CriteriosAceptacion"
+    - file: "Unidades/Unidad_6/casosUso"
+    - file: "Unidades/Unidad_6/hablemosdelProyecto"
+- file: Unidad7
+  sections:
+    - file: "Unidades/Unidad_7/EvaluamosLoAprendido"
 
 #- file: Unidad8
 #  sections:

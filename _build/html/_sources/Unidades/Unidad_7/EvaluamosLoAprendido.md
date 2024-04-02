@@ -39,6 +39,7 @@ Recuerde nombrar el archivo como: **SoftwareII_Taller4_NombreApellido_2023_03.pd
     <iframe src="https://view.officeapps.live.com/op/embed.aspx?src=https://github.com/BioAITeamLearning/SoftwareII_2023_03_Ucaldas/raw/main/Unidades/Unidad_7/ExtrasSoftII.pptx" frameborder="1" width="750" height="470" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">
 </div>
 
+<!--
 
 ### ✏️ Quiz-Parcial!!
 
@@ -83,3 +84,5 @@ Proyecto final: Desarrollo de Software 2
 Explore this book {fas}`arrow-right`
 :::
 ::::
+
+-->
