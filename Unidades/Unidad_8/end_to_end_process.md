@@ -43,6 +43,13 @@ La compañía **"DeliciousMeals"** necesita una plataforma que permita a los cli
 
 <img src="../../_static/images/HUEE.png" />
 
+## 📌  Criterios de aceptación:
+
+```{warning}
+Realizar los criterios de aceptación de las historias de usuario.
+
+```
+
 ## Pasemos ahora a los casos de uso...
 
 ## 📌  Casos de uso:
@@ -142,7 +149,7 @@ Explore this book {fas}`arrow-right`
 
 Realice en la herramienta figma los mockups de los casos de uso 3, 4, 5, 6 y 7.
 
-
+<!--
 ## Repositorio de la monitoria de backend
 
 ::::{card-carousel} 1
@@ -154,12 +161,14 @@ Realice en la herramienta figma los mockups de los casos de uso 3, 4, 5, 6 y 7.
 :link: https://github.com/johanpina/UcaldasBasicBack/tree/main
 **💬 Repositorio de apoyo**
 ^^^
-```{image} https://banner2.cleanpng.com/20180331/udw/kisspng-social-media-github-computer-icons-logo-github-5ac0188083c4f5.8572681115225386245397.jpg
+ACA VAN TRIPLE COMILLAS{image} https://banner2.cleanpng.com/20180331/udw/kisspng-social-media-github-computer-icons-logo-github-5ac0188083c4f5.8572681115225386245397.jpg
 :height: 100
 ```
 
 Repositorio con practica de backend.
-+++
-Explore this repo {fas}`arrow-right`
+ACA VAN 3 CRUCES DE MAS
+Explore this repo {fas}ACA VA UNA SIMPLE REVERSAarrow-right`
 :::
 ::::
+
+-->
