@@ -22,3 +22,6 @@ Proyecto final de la asignatura
 Explore this book {fas}`arrow-right`
 :::
 ::::
+
+
+<img src="_static/images/PaletaColoresAPP.png" />
