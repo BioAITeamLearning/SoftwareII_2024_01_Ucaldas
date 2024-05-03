@@ -24,4 +24,4 @@ Explore this book {fas}`arrow-right`
 ::::
 
 
-<img src="_static/images/PaletaColoresAPP.png" />
+<img src="https://github.com/BioAITeamLearning/SoftwareII_2024_01_Ucaldas/blob/main/_static/images/PaletaColoresAPP.png?raw=true" />
