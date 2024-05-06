@@ -7,6 +7,69 @@ title: Unidad 9
 
 <img src="_static/images/contenidoU9.png"/>
 
+## Vamos a clonar el repositorio y verificar que todo funcione.
+
+1. Vamos a realizar un fork del repositorio de la aplicación de backend. [Backend](https://github.com/johanpina/auth_service_class)
+2. Clonemos el repositorio y revisemos que todo funcione correctamente.
+
+```bash
+git clone https://github.com/johanpina/auth_service_class.git
+cd auth_service_class
+
+```
+
+3. Vamos a instalar las dependencias de la aplicación.
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+
+pip install -r requirements.txt
+
+```
+
+4. Vamos a ejecutar la aplicación.
+
+```bash
+uvicorn main:app --reload
+```
+
+5. Vamos a probar la aplicación en el navegador. (login, sigup, verificar datos en DB)
+
+## Despleguemos esto en la nube.
+
+::::{card-carousel} 1
+
+:::{card}
+:margin: 3
+:class-body: text-center
+:class-header: bg-light text-center
+:link: https://render.com/
+
+**💬 Cuenta en render**
+^^^
+```{image} https://media.licdn.com/dms/image/D4E0BAQGGDoFoqHtOvA/company-logo_200_200/0/1702595267620/renderco_logo?e=2147483647&v=beta&t=Ywm0UZpTXbiXPopyfCDty8QXSEVz88QWWCwy28qLUyE
+:height: 100
+```
+Vamos a crear una cuenta en Render con el correo de github.
++++
+Explore this link {fas}`arrow-right`
+:::
+::::
+
+
+### Crear la aplicación en Render
+
+1. Vamos a crear una nueva aplicación en Render.
+2. Vamos a seleccionar la opción de **Web Service**.
+3. Vamos a seleccionar el repositorio de la aplicación de backend.
+4. Vamos a seleccionar la rama de **main**.
+5. Se debe seleccionar el runtime de Python.
+6. Se debe configurar la ruta de la aplicación.
+7. Se debe configurar el comando para ejecutar la aplicación: uvicorn main:app --host=0.0.0.0 --port=8000
+8. Se debe configurar el puerto de la aplicación. PORT 8000
+9. Vamos a crear la aplicación.
+
 ## Introducción a Docker
 
 Docker es una plataforma de código abierto que permite a los desarrolladores y a los administradores de sistemas construir, enviar y ejecutar aplicaciones en contenedores. Estos contenedores son unidades estándar de software que empaquetan el código y todas sus dependencias para que la aplicación se ejecute de manera rápida y confiable desde un entorno a otro.
@@ -194,15 +257,28 @@ git push
 :margin: 3
 :class-body: text-center
 :class-header: bg-light text-center
-:link: https://www.fl0.com/
+:link: https://render.com/
 
-**💬 Despliegue del contenedor**
+**💬 Cuenta en render**
 ^^^
-```{image} https://media.licdn.com/dms/image/C560BAQE6AjeKqKMmaQ/company-logo_200_200/0/1675403197765/fl0_logo?e=2147483647&v=beta&t=V2OmE9kvbKuB34qi9NsyezF3WxmOjy-yPUyICYrPugw
+```{image} https://media.licdn.com/dms/image/D4E0BAQGGDoFoqHtOvA/company-logo_200_200/0/1702595267620/renderco_logo?e=2147483647&v=beta&t=Ywm0UZpTXbiXPopyfCDty8QXSEVz88QWWCwy28qLUyE
 :height: 100
 ```
-Deploy backend applications and databases in minutes.
+Vamos a crear una cuenta en Render con el correo de github.
 +++
 Explore this link {fas}`arrow-right`
 :::
 ::::
+
+
+### Crear la aplicación en Render a partir de docker
+
+
+1. Vamos a crear una nueva aplicación en Render.
+2. Vamos a seleccionar la opción de **Web Service**.
+3. Vamos a seleccionar el repositorio de la aplicación de backend.
+4. Vamos a seleccionar la rama de **main**.
+5. Se debe seleccionar el runtime de docker.
+6. Se debe configurar la ruta del dockerfile.
+7. Se debe configurar el puerto de la aplicación. PORT 8000
+8. Vamos a crear la aplicación.
