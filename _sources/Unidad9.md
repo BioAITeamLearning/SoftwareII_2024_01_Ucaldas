@@ -34,7 +34,7 @@ pip install -r requirements.txt
 uvicorn main:app --reload
 ```
 
-5. Vamos a probar la aplicación en el navegador. (login, sigup, verificar datos en DB)
+5. Vamos a probar la aplicación en el navegador. (login, signup, verificar datos en DB)
 
 ## Despleguemos esto en la nube.
 
