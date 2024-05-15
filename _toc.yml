@@ -54,11 +54,11 @@ chapters:
     - file: "Unidades/Unidad_8/end_to_end_process"
     - file: "Unidades/Unidad_8/EvaluemosLoAprendido_parcial"
 - file: Unidad9
-#- file: Unidad10
-#  sections:
-#    - file: "Unidades/Unidad_10/PatronesArquitectonicos"
-#    - file: "Unidades/Unidad_10/DiagramasDePaquetesDespliegue"
-#    - file: "Unidades/Unidad_10/GithubPro_howToObtain"
+- file: Unidad10
+  sections:
+    - file: "Unidades/Unidad_10/PatronesArquitectonicos"
+    - file: "Unidades/Unidad_10/DiagramasDePaquetesDespliegue"
+    - file: "Unidades/Unidad_10/GithubPro_howToObtain"
 #    - file: "Unidades/Unidad_10/EvaluemosLoAprendido"
 #- file: Unidad11
 #- file: Unidad12
