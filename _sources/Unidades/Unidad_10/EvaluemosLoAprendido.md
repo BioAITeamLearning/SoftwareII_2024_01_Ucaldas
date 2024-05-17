@@ -17,7 +17,7 @@ En grupos, realice una presentación sobre los patrones de arquitectura de softw
 6. Muestra de un caso de estudio en el que se haya aplicado el patrón de arquitectura de software asignado.
 7. Muestra de código simple que ilustre la aplicación del patrón de arquitectura de software asignado.
 
-### Grupos de trabajo
+### Grupos de trabajo
 
 1. Grupo 1: Patrón de arquitectura de software de N-capas.
 2. Grupo 2: Patrón de arquitectura de software MVC.
