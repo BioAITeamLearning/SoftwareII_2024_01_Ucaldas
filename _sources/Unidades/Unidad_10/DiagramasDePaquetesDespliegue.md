@@ -82,7 +82,7 @@ Identifiquemos  los principales paquetes y los actores involucrados:
 ::::{dropdown} Solución: Paquetes
 Ahora vamos a crear el paquete general y a colocar los actores:
 
-<img src="../../_static/images/solucionDiagramas1.png"/>
+<img src="../../_static/images/SolucionDiagramas1.png"/>
 
 ::::
 
