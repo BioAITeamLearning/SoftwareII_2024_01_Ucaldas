@@ -89,7 +89,7 @@ Ahora vamos a crear el paquete general y a colocar los actores:
 ::::{dropdown} Solución: Paquetes
 Luego, diseñamos los paquetes y los subpaquetes que se establecen en la tabla y les damos las relaciones con sus dependencias
 
-<img src="../../_static/images/solucionDiagramas2.png"/>
+<img src="../../_static/images/SolucionDiagramas2.png"/>
 
 ::::
 
